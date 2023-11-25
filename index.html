@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Möteskartan | Visit Västerås</title>
+    <meta
+      name="description"
+      content="Möteskartan hjälper dig att hitta din nästa mötesplats. Planering och förarbete ger lyckat möte! Vare sig ni planerar en stor kongress, ett möte eller en konferens så har Västerås allt ni behöver."
+    />
+    <style type="text/css">
+      /* Frontpage settings plugin */
+      /*Custom css for header and footer*/
+      header.site-header,
+      nav.main-navigation {
+        background-color: #a84e40;
+      }
+      header a:link,
+      header a:visited {
+        color: #fff;
+      }
+      header a:link .fas,
+      header a:visited .fas {
+        color: #fff;
+      }
+      nav.main-navigation ul:first-child li a svg {
+        fill: #fff;
+      }
+      header .button-toggle-menu svg {
+        fill: #fff;
+      }
+      nav.main-navigation ul li a:hover svg,
+      nav.main-navigation ul li.current_page_item a svg,
+      nav.main-navigation ul li.current-menu-ancestor a svg {
+        fill: #fff;
+      }
+      nav.main-navigation > ul > li:hover > a::before,
+      nav.main-navigation > ul > li.current_page_item > a::before,
+      nav.main-navigation > ul > li.current-page-ancestor > a::before,
+      nav.main-navigation > ul > li.current-menu-ancestor > a::before {
+        background-color: #fff;
+      }
+      .main-navigation ul li ul.sub-menu {
+        background-color: #fff;
+        border-color: #a84e40;
+      }
+      .main-navigation ul li ul.sub-menu:before {
+        background-color: #fff;
+        border-color: #a84e40;
+      }
+      .main-navigation ul li ul.sub-menu:after {
+        background-color: #fff;
+        border-color: #a84e40;
+      }
+      .main-navigation ul li ul.sub-menu > li > a {
+        color: #a84e40;
+      }
+      .main-navigation ul li ul.sub-menu > li > a::before {
+        background-color: #a84e40;
+      }
+      .main-navigation ul li.menu-item-has-children > a::after {
+        background-color: #fff;
+      }
+      .main-navigation
+        ul
+        li
+        ul.sub-menu
+        > li
+        > a:hover
+        span.text-with-underscore::before,
+      .main-navigation
+        ul
+        li
+        ul.sub-menu
+        > li.current-menu-item
+        > a
+        span.text-with-underscore::before {
+        background-color: #a84e40 !important;
+      }
+      .main-navigation > ul:first-child > li .sub-menu__header {
+        background-color: #a84e40;
+      }
+      .main-navigation > ul:first-child > li .sub-menu > li {
+        border-bottom-color: #a84e40;
+      }
+      body nav.main-navigation ul.menu > li.menu-item {
+        border-bottom-color: #fff;
+      }
+      body nav.main-navigation {
+        border-top-color: #fff;
+      }
+      .main-navigation > ul:first-child > li .sub-menu__header__goback {
+        color: #fff;
+      }
+      .main-navigation > ul:first-child > li .sub-menu__header__goback svg {
+        fill: #fff;
+      }
+      button.button-toggle-menu {
+        color: #fff;
+      }
+      button.button-toggle-menu span.symbol svg {
+        fill: #fff;
+      }
+      button.button-toggle-menu:hover span.symbol svg {
+        fill: #fff;
+      }
+      button.button-toggle-menu:hover::after {
+        background-color: #fff;
+      }
+      .mobile-nav-footer__li__link__label {
+        color: #fff;
+      }
+      .mobile-nav-footer__li__link svg {
+        fill: #fff;
+      }
+
+      /**
+                 * Modal box Search
+                 */
+
+      .hiq-modal {
+        background-color: #fff;
+      }
+      .modal-search .search-input-box {
+        color: #a84e40;
+      }
+      .modal-search .search-input-box .search-input-symbol svg {
+        fill: #a84e40;
+      }
+      .modal-search input[type="search"],
+      .modal-search input[type="search"]::placeholder {
+        color: #a84e40;
+      }
+      .modal-search button {
+        color: #fff;
+      }
+      .modal-search button span.button-symbol svg {
+        fill: #fff;
+      }
+      .modal-search button,
+      .modal-search button:before,
+      .modal-search button:after {
+        color: #fff;
+        background-color: #a84e40;
+      }
+      .modal-search .search-input-box {
+        border-bottom-color: #a84e40;
+      }
+
+      /**
+                 * Modal box Translate
+                 */
+      .google-translate > li > ul,
+      .google-translate > li > ul:before,
+      .google-translate > li > ul:after {
+        background-color: #a84e40;
+      }
+      .google-translate-link-text,
+      .google-translate p {
+        color: #a84e40;
+      }
+      .google-translate > li > a span svg {
+        fill: #a84e40;
+      }
+      .google-translate > li > ul > li a {
+        color: #fff;
+      }
+      .google-translate > li > ul > li:not(:last-child) a {
+        border-bottom-color: #fff;
+      }
+
+      /**
+                 *  Extra nav 
+                 */
+
+      a.nav-side-button-1 .button-label,
+      a.nav-side-button-1 .button-symbol:before {
+        color: #fff;
+      }
+      a.nav-side-button-1 .button-symbol svg {
+        fill: #fff;
+      }
+      a.nav-side-button-1:hover .button-symbol svg {
+        fill: #fff;
+      }
+      a.nav-side-button-1:hover .button-label:after {
+        background-color: #fff;
+      }
+      h1.site-title svg,
+      p.site-title a svg {
+        fill: #fff;
+      }
+
+      /**
+                 * Footer
+                 */
+      body:not(.theme-expectrum) .footer__content-wrap > .row::before,
+      .footer__content-wrap > .row::after {
+        background-color: #a84e40;
+      }
+      body:not(.theme-expectrum) .footer__content-wrap > .row {
+        background-color: #a84e40;
+      }
+      body:not(.theme-expectrum) .bottom-footer,
+      body:not(.theme-expectrum) .footer__content-wrap.container::after {
+        background-color: #fff;
+        color: #003e4a;
+      }
+      body:not(.theme-expectrum) .bottom-footer a,
+      .bottom-footer a:visited {
+        color: #003e4a;
+      }
+      body:not(.theme-expectrum) .footer__top-symbol svg {
+        fill: #a84e40;
+      }
+      body:not(.theme-expectrum) .footer__content-wrap a,
+      .footer__content-wrap a:visited {
+        color: #fff;
+      }
+      body:not(.theme-expectrum) .footer__content-wrap a span.list-symbol {
+        fill: #fff;
+      }
+      body:not(.theme-expectrum) .footer__content-wrap > .row h2 {
+        color: #fff;
+      }
+      body:not(.theme-expectrum) .footer__content-wrap > .row h3 {
+        color: #fff;
+      }
+
+      /**
+                 * Below Footer
+                 */
+
+      body:not(.theme-expectrum) .footer__extra-info__social-media h2 {
+        color: #003e4a;
+      }
+      body:not(.theme-expectrum)
+        .footer__extra-info__social-media__links-group
+        a
+        span.link-symbol
+        svg {
+        fill: #003e4a;
+      }
+      body:not(.theme-expectrum)
+        .footer__extra-info__social-media__links-group
+        a {
+        color: #003e4a;
+      }
+    </style>
+    <style type="text/css">
+      .site-title a,
+      .site-description {
+        color: #a84e40;
+      }
+    </style>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="https://visitvasteras.se/wp/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="contact-form-7-css"
+      href="https://visitvasteras.se/app/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="cmplz-general-css"
+      href="https://visitvasteras.se/app/plugins/complianz-gdpr/assets/css/cookieblocker.min.css?ver=6.3.3"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="visit-vasteras-style-css"
+      href="https://visitvasteras.se/app/themes/visit-vasteras/style.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="main-styles-css"
+      href="https://visitvasteras.se/app/themes/mother/dist/main.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="child-style-css"
+      href="https://visitvasteras.se/app/themes/visit-vasteras/dist/main.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+  </head>
+  <body style="overflow: hidden">
+    <header id="masthead" class="site-header container-fluid">
+      <div class="row site-header__row">
+        <div class="mobile-nav d-md-none col-auto">
+          <a
+            class="button-toggle-menu menu-toggle"
+            aria-controls="primary-menu"
+            aria-expanded="false"
+            href="#"
+            target="_blank"
+            >Meny
+            <span class="symbol">
+              <svg viewBox="460 200 410 360">
+                <path d="M460 200h320v80H460z"></path>
+                <path d="M460 200h410v80H460zM460 340h320v80H460z"></path>
+                <path d="M460 340h410v80H460zM460 480h320v80H460z"></path>
+                <path d="M460 480h410v80H460z"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="site-header__logo-column d-flex col-auto">
+          <div class="site-branding">
+            <p class="site-title">
+              <a href="https://visitvasteras.se/" rel="home">
+                <img
+                  src="https://visitvasteras.se/app/uploads/2020/06/visitvasteras-vit.svg"
+                  class="attachment-full size-full"
+                  alt="Logotyp Visit Västerås"
+                  loading="lazy"
+                  title="Logotyp Visit Västerås"
+                />
+              </a>
+            </p>
+          </div>
+          <!-- .site-branding -->
+        </div>
+
+        <div class="site-header__nav-column col-auto text-center">
+          <nav id="site-navigation" class="main-navigation d-inline-block">
+            <ul id="primary-menu" class="menu">
+              <li
+                id="menu-item-125"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-125"
+              >
+                <a href="https://visitvasteras.se/bo/"
+                  >Bo<span class="svg-box"
+                    ><svg viewBox="0 0 60 80">
+                      <path
+                        d="M 12,58 H 24 V 70 H 12 Z M 0,46 H 12 V 58 H 0 Z M 36,58 H 48 V 70 H 36 Z M 48,46 H 60 V 58 H 48 Z M 24,0 H 36 V 81 H 24 Z"
+                      ></path></svg></span
+                ></a>
+                <ul class="sub-menu">
+                  <li
+                    id="menu-item-1277"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277"
+                  >
+                    <a href="https://visitvasteras.se/bo/bed-breakfast/"
+                      >Bed &amp; Breakfast</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-1278"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278"
+                  >
+                    <a href="https://visitvasteras.se/bo/camping-stugor/"
+                      >Camping &amp; stugor</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-128"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"
+                  >
+                    <a href="https://visitvasteras.se/bo/hotell/">Hotell</a>
+                  </li>
+                  <li
+                    id="menu-item-8752"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8752"
+                  >
+                    <a href="https://visitvasteras.se/boendepaket/"
+                      >Boendepaket</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="menu-item-1268"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1268"
+              >
+                <a href="https://visitvasteras.se/gora/">Göra</a>
+              </li>
+              <li
+                id="menu-item-1269"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1269"
+              >
+                <a href="https://visitvasteras.se/ata/"
+                  >Äta<span class="svg-box"
+                    ><svg viewBox="0 0 60 80">
+                      <path
+                        d="M 12,58 H 24 V 70 H 12 Z M 0,46 H 12 V 58 H 0 Z M 36,58 H 48 V 70 H 36 Z M 48,46 H 60 V 58 H 48 Z M 24,0 H 36 V 81 H 24 Z"
+                      ></path></svg></span
+                ></a>
+                <ul class="sub-menu">
+                  <li
+                    id="menu-item-1273"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1273"
+                  >
+                    <a href="https://visitvasteras.se/ata/restauranger/"
+                      >Restauranger</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-1272"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"
+                  >
+                    <a href="https://visitvasteras.se/ata/pubar-barer/"
+                      >Pubar, barer &amp; klubbar</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-1270"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1270"
+                  >
+                    <a href="https://visitvasteras.se/ata/kafeer/">Kaféer</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="menu-item-1274"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1274"
+              >
+                <a href="https://visitvasteras.se/resa/"
+                  >Resa<span class="svg-box"
+                    ><svg viewBox="0 0 60 80">
+                      <path
+                        d="M 12,58 H 24 V 70 H 12 Z M 0,46 H 12 V 58 H 0 Z M 36,58 H 48 V 70 H 36 Z M 48,46 H 60 V 58 H 48 Z M 24,0 H 36 V 81 H 24 Z"
+                      ></path></svg></span
+                ></a>
+                <ul class="sub-menu">
+                  <li
+                    id="menu-item-1276"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"
+                  >
+                    <a href="https://visitvasteras.se/resa/res-till-vasteras/"
+                      >Res till Västerås</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-1275"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1275"
+                  >
+                    <a href="https://visitvasteras.se/resa/res-runt-i-vasteras/"
+                      >Res runt i Västerås</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="menu-item-6264"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6264"
+              >
+                <a href="https://vasterascvb.se/" target="_blank">Möten</a>
+              </li>
+              <li
+                id="menu-item-134"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"
+              >
+                <a href="https://visitvasteras.se/evenemang/">Evenemang</a>
+              </li>
+            </ul>
+            <ul class="mobile-nav-footer">
+              <li class="mobile-nav-footer__li">
+                <a
+                  class="mobile-nav-footer__li__link"
+                  href="https://visitvasteras.se/kontakta-medarbetare/"
+                  target="_blank"
+                >
+                  <svg viewBox="0 0 28 16">
+                    <path
+                      d="M18.668 0v3.197h3.2V0zm3.2 3.197V6.4H0v3.2h21.867v3.2h3.201V9.6H28V6.4h-2.932V3.197zm0 9.604h-3.2V16h3.2z"
+                    ></path>
+                  </svg>
+                  <span class="mobile-nav-footer__li__link__label"
+                    >Kontakta medarbetare</span
+                  >
+                </a>
+              </li>
+              <li class="mobile-nav-footer__li">
+                <a
+                  class="mobile-nav-footer__li__link"
+                  href="https://vasterasmarknadnaringsliv.se/"
+                  target="_blank"
+                >
+                  <svg viewBox="0 0 28 16">
+                    <path
+                      d="M18.668 0v3.197h3.2V0zm3.2 3.197V6.4H0v3.2h21.867v3.2h3.201V9.6H28V6.4h-2.932V3.197zm0 9.604h-3.2V16h3.2z"
+                    ></path>
+                  </svg>
+                  <span class="mobile-nav-footer__li__link__label"
+                    >Västerås marknad &amp; näringsliv</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- #site-navigation -->
+        </div>
+        <div
+          class="site-header__search-column d-flex align-items-center col-auto p-3"
+        >
+          <!-- Button trigger modal -->
+
+          <a
+            href="#"
+            id="search-button"
+            class="nav-side-button-1 search d-flex"
+            data-toggle="hiq-modal"
+            data-target="#modal-search"
+            aria-expanded="false"
+            target="_blank"
+          >
+            <span class="button-symbol search">
+              <svg width="23" height="23" viewBox="0 0 94.028366 94.027847">
+                <path
+                  d="M20.895 0v10.447H41.79V0H31.343zM41.79 10.447v10.448h10.448V10.447zm10.448 10.448V41.79h10.448V20.895zm0 20.895H41.79v10.448h10.448zm0 10.448v20.895h10.448V83.58h10.447v10.448H83.58V83.58h10.448V73.133H83.58V62.686H73.133V52.238H62.686zm-10.448 0H20.895v10.448H41.79zm-20.895 0V41.79H10.448v10.448zM10.448 41.79V20.895H0V41.79zm0-20.895h10.447V10.447H10.448z"
+                ></path>
+              </svg>
+            </span>
+
+            <span class="button-label d-lg-inline d-md-none">Sök</span>
+          </a>
+
+          <a
+            href="#"
+            id="translate-button"
+            class="nav-side-button-1 translate d-flex"
+            data-toggle="hiq-modal"
+            data-target="#modal-translate"
+            aria-expanded="false"
+            target="_blank"
+          >
+            <span class="button-symbol translate">
+              <svg width="23" height="23" viewBox="0 0 63 63">
+                <g data-name="Lager 2">
+                  <g data-name="Lager 1">
+                    <path d="M18 18h9v9h-9zM18 36H9V18H0v27h9v9h9V36z"></path>
+                    <path
+                      d="M54 18V9h-9V0H18v9h9v9h9v9h-9v18h9v9H18v9h27v-9h9v-9h9V18zm0 18h-9v-9h9zM9 9h9v9H9z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span class="button-label notranslate d-lg-inline d-md-none"
+              >Translate</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+    <div id="map-root"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

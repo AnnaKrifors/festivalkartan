@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "Visit VG";
+  src: local("Visit VG"), local("vg5000"),
+    url("/VG5000-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("roboto"),
+    url("/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("roboto"),
+    url("/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("roboto"),
+    url("/Roboto-Light.ttf") format("truetype");
+  font-weight: 400;
+} */
+
+:root {
+  font-family: Roboto, Arial, Sans-Serif;
+  font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-family: Visit VG;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0px;
+}
+h1.small {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.25px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.10000000149011612px;
+}
+
+h7 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.10000000149011612px;
+}
+
+div.mapboxgl-popup-content,
+.maplibregl-popup-content {
+  padding: 2px 6px;
+  border: 3px solid rgb(0, 62, 74);
+  color: rgb(0, 62, 74);
+  font-family: Roboto;
+  font-weight: Bold;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  display: none;
+}
+
+.vv-font {
+  font-family: Visit VG;
+}
+
+.pin-label {
+  display: none;
+}
+
+.map-pin:hover {
+  z-index: 2 !important;
+}
+
+.map-pin:hover > .pin-label {
+  display: block;
+}
