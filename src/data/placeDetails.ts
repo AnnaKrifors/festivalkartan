@@ -1,10 +1,10 @@
-import { writable, type Writable } from "svelte/store";
+import { writable } from "svelte/store";
 import type PlaceDetails from "../types/PlaceDetails";
 import { get } from "./fetch";
 import { currentPlace } from "./places";
 
 const fetchPlaceDetails = async (id: number) => {
-  const response: PlaceDetails = await get("/meeting/" + id);
+  const response = await get<PlaceDetails>("/meeting/" + id);
   return response;
 };
 
@@ -38,7 +38,7 @@ const placeDetailsDictionary: { [id: number]: PlaceDetails } = {};
 export const placeDetailsStore = writable({
   loading: false,
   error: false,
-  placeDetails: undefined as PlaceDetails,
+  placeDetails: undefined as PlaceDetails | undefined,
 });
 
 currentPlace.subscribe((place) => {

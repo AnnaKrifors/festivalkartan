@@ -3,7 +3,7 @@ import type Place from "../types/Place";
 import { get } from "./fetch";
 
 const fetchPlaces = async () => {
-  const response: Place[] = await get("/meetings");
+  const response = await get<Place[]>("/meetings");
   for (const place of response) {
     place.selected = false;
   }
@@ -19,7 +19,7 @@ export const filterStore: Writable<string[]> = writable([]);
 export const placesStore: Writable<Place[]> = writable([]);
 fetchPlaces().then((places) => placesStore.set(places));
 
-export const currentPlace: Writable<Place> = writable(null);
+export const currentPlace: Writable<Place | null> = writable(null);
 
 filterStore.subscribe((filters) => {
   placesStore.update((places) => {
