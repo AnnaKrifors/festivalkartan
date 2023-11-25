@@ -1,6 +1,6 @@
-# Visit Västerås Map
+# Festival Map
 
-This application is a pseudo 3d map helping users find places for meetings of different sorts in Västerås. The map is built using the [MapLibre GL JS](https://maplibre.org/) library.
+This application is a pseudo 3d map helping users find places during Västerås City Festival. The map is built using the [MapLibre GL JS](https://maplibre.org/) library.
 
 ## Getting started
 
