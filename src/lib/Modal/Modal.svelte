@@ -24,7 +24,7 @@
 
 <div
   id="modal"
-  class="absolute bottom-0 left-0 z-[2] max-h-full max-w-full pt-4"
+  class="absolute bottom-0 left-0 z-10 max-h-full max-w-full pt-4"
 >
   <div class="bg-slate-50">
     <ExpandButton
