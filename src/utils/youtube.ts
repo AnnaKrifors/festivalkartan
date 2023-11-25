@@ -1,5 +1,6 @@
-export function getVideoId(url) {
-  let regex =
+export function getVideoId(url: string) {
+  const regex =
     /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
-  return regex.exec(url)[3];
+  const match = regex.exec(url);
+  return match ? match[3] : null;
 }

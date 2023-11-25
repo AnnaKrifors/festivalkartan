@@ -12,7 +12,6 @@
   {#if autoPlay}
     <div class="relative aspect-video w-full overflow-hidden md:aspect-[16/6]">
       <iframe
-        type="text/html"
         frameborder="0"
         title={video?.description}
         src={video?.source.split("?")[0] +
@@ -25,7 +24,6 @@
     </div>
   {:else}
     <iframe
-      type="text/html"
       frameborder="0"
       title={video?.description}
       src={video?.source.split("?")[0]}

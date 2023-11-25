@@ -3,6 +3,9 @@
   import { swipe } from "svelte-gestures";
   import Icon from "../Icon.svelte";
 
+  /**
+   * @type {string | any[]}
+   */
   export let images = [];
 
   let index = 0;
@@ -13,7 +16,9 @@
   const prev = () => {
     index = index == 0 ? images.length - 1 : (index - 1) % images.length;
   };
-  const swipeHandler = (event) => {
+  const swipeHandler = (
+    /** @type {{ detail: { direction: string; }; }} */ event,
+  ) => {
     if (event.detail.direction == "left") {
       next();
     } else if (event.detail.direction == "right") {

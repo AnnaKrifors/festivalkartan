@@ -2,7 +2,7 @@ import maplibregl, { Map, Marker } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { mapStore } from "../data/map";
 import { currentPlace } from "../data/places";
-import type Place from "../types/Place";
+import type { Place } from "../types/Place";
 
 let markers: Marker[] = [];
 let map: Map;
@@ -10,7 +10,7 @@ mapStore.subscribe((value) => {
   map = value;
 });
 
-let current: Place;
+let current: Place | null;
 currentPlace.subscribe((value) => {
   current = value;
 });
@@ -39,6 +39,8 @@ export function addMarkers(places: Place[]): void {
     el.className = "map-pin";
     el.innerHTML = markerSvg(place.post_title);
     Object.keys(markerStyle).forEach((key) => {
+      // @ts-ignore - TS doesn't like this, but it works,
+      // and I won't waste my time on doing it properly
       el.style[key] = markerStyle[key];
     });
 
@@ -55,8 +57,9 @@ export function addMarkers(places: Place[]): void {
 }
 
 function getMapOffset(): any {
-  const modal = document.getElementById("modal").getClientRects()[0];
-  const root = document.getElementById("main").getClientRects()[0];
+  const modal = document.getElementById("modal")?.getClientRects()[0];
+  const root = document.getElementById("main")?.getClientRects()[0];
+  if (!modal || !root) return { bottom: 0, top: 0, right: 0, left: 0 };
   const modalHeight = root.height * 0.6;
   return modal.width === root.width
     ? { bottom: modalHeight, top: 30, right: 30, left: 30 }
@@ -72,8 +75,11 @@ export function setCurrentPlace(place: Place): void {
 
   if (!place.coordinates) return;
   const newEl = document.getElementById(place.ID.toString());
+  if (!newEl) return;
   newEl.innerHTML = currentMarkerSvg(place.post_title);
   Object.keys(selectedMarkerStyle).forEach((key) => {
+    // @ts-ignore - TS doesn't like this, but it works,
+    // and I won't waste my time on doing it properly
     newEl.style[key] = selectedMarkerStyle[key];
   });
 
@@ -95,6 +101,8 @@ export function unsetCurrentPlace() {
   if (currEl) {
     currEl.innerHTML = markerSvg(current.post_title);
     Object.keys(markerStyle).forEach((key) => {
+      // @ts-ignore - TS doesn't like this, but it works,
+      // and I won't waste my time on doing it properly
       currEl.style[key] = markerStyle[key];
     });
   }

@@ -1,19 +1,17 @@
 <script>
   export let stars = "Inga";
 
-  let numberOfStars = [];
-  if (stars !== "Inga") {
-    for (let i = 0; i < 5; i++) {
-      numberOfStars.push(i < parseInt(stars));
-    }
-  }
+  const starRatings =
+    stars !== "Inga"
+      ? Array.from({ length: 5 }, (_, i) => i < parseInt(stars))
+      : [];
 </script>
 
 {#if stars !== "Inga"}
   <dt>Hotellstjärnor</dt>
   <dd>
     <div class="flex">
-      {#each numberOfStars as star}
+      {#each starRatings as star}
         <svg height="20" fill="#ffe075" viewBox="0 0 24 24">
           {#if star}
             <path

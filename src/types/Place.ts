@@ -1,6 +1,6 @@
-import type Image from "./Image";
+import type { Image } from "./Image";
 
-type Place = {
+export type Place = {
   ID: number;
   coordinates?: {
     latitude: number;
@@ -19,5 +19,3 @@ export type Facility = {
   capacity: number;
   unit: string;
 };
-
-export default Place;

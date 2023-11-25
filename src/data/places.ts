@@ -1,5 +1,5 @@
 import { writable, type Writable } from "svelte/store";
-import type Place from "../types/Place";
+import type { Place } from "../types/Place";
 import { get } from "./fetch";
 
 const fetchPlaces = async () => {

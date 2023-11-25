@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  // @ts-ignore
   import * as turf from "@turf/turf";
   import maplibregl, { Map, type LngLatLike } from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
@@ -14,7 +15,7 @@
     maxZoom: number,
     animationType: "loop" | "loopInOut",
   ): void {
-    let movingMarker;
+    let movingMarker: maplibregl.Marker;
     const startPosition: LngLatLike = startLngLat;
     const route = {
       type: "FeatureCollection",
@@ -68,7 +69,12 @@
     });
   }
 
-  function setImageSize(element, map, width, ratio): void {
+  function setImageSize(
+    element: HTMLDivElement,
+    map: Map,
+    width: number,
+    ratio: number,
+  ) {
     const zoomLevel = map.getZoom();
     const variable = width ** (zoomLevel / 7);
     const tempWidth = variable;
@@ -105,9 +111,9 @@
     steps: number,
     feature: any,
     el: HTMLDivElement,
-    movingMarker: maplibregl.Marker,
     animationType: "loop" | "loopInOut",
     loopIn: boolean,
+    movingMarker?: maplibregl.Marker,
   ): void {
     if (counter < steps) {
       requestAnimationFrame(() => {
@@ -164,7 +170,7 @@
     const long = feature.geometry.coordinates[roundedCounter][0];
     const lat = feature.geometry.coordinates[roundedCounter][1];
 
-    movingMarker.setLngLat([long, lat]);
+    movingMarker?.setLngLat([long, lat]);
 
     counter = counter + 1;
 
@@ -174,9 +180,9 @@
         steps,
         feature,
         el,
-        movingMarker,
         animationType,
         loopIn,
+        movingMarker,
       );
     }
 

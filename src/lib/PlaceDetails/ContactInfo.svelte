@@ -4,7 +4,11 @@
 
   export let info: ContactInfo;
 
-  let infoItems = [];
+  let infoItems: {
+    key: string;
+    value: string;
+    href?: string;
+  }[] = [];
   $: {
     infoItems = Object.entries(info).map(([key, value]) => {
       if (key === "address") {

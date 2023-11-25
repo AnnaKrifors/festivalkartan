@@ -1,6 +1,6 @@
-import type Image from "./Image";
+import type { Image } from "./Image";
 
-type LocationDetails = {
+export type PlaceDetails = {
   preface: string;
   body: string;
   contactInfo: ContactInfo;
@@ -23,5 +23,3 @@ export type ContactInfo = {
   phone: string;
   web: string;
 };
-
-export default LocationDetails;

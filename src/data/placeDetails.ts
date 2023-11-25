@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type PlaceDetails from "../types/PlaceDetails";
+import type { PlaceDetails } from "../types/PlaceDetails";
 import { get } from "./fetch";
 import { currentPlace } from "./places";
 

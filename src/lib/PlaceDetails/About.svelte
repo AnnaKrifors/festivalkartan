@@ -1,17 +1,17 @@
 <script lang="ts">
   import { placeDetailsStore } from "../../data/placeDetails";
   import { currentPlace } from "../../data/places";
-  import type LocationDetails from "../../types/PlaceDetails";
+  import type { PlaceDetails } from "../../types/PlaceDetails";
   import HotelStars from "./HotelStars.svelte";
 
-  let details: LocationDetails;
+  let details: PlaceDetails | undefined;
   placeDetailsStore.subscribe((value) => {
     details = value.placeDetails;
   });
 
   let aboutList: {
     label: string;
-    value: string | number;
+    value: string | undefined;
   }[];
 
   $: {
@@ -45,7 +45,7 @@
       {#each aboutList as about}
         <div class="flex flex-col pb-3">
           {#if about.label === "Hotellstjärnor"}
-            <HotelStars stars={about.value.toString()} />
+            <HotelStars stars={about.value?.toString()} />
           {:else if about.value}
             <dt class="font-thin text-slate-100">{about.label}</dt>
             <dd class="font-medium">{about.value}</dd>

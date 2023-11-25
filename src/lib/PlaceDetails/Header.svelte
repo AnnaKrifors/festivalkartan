@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type Image from "../../types/Image";
+  import type { Image } from "../../types/Image";
   import type { Video as VideoType } from "../../types/PlaceDetails";
   import ImageCarousel from "./ImageCarousel.svelte";
   import Video from "./Video.svelte";
 
-  export let title: string;
-  export let images: Image[];
+  export let title: string = "";
+  export let images: Image[] = [];
   export let video: VideoType;
   export let videoOnTop: boolean = false;
 </script>
