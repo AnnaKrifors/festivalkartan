@@ -8,7 +8,7 @@ Make sure you have [pnpm](https://pnpm.io/) installed and run the following comm
 
 ```bash
 pnpm install
-pnpm run dev
+pnpm dev
 ```
 
 ## Recommended IDE Setup
