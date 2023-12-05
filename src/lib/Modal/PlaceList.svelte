@@ -38,7 +38,7 @@
             {:else}
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
-            <div class="w-full overflow-hidden bg-[#003E4A] p-4 text-white">
+            <div class="bg-dark-green text-beige w-full overflow-hidden p-4">
               <div class="align-center flex overflow-hidden pb-2">
                 <span
                   class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"

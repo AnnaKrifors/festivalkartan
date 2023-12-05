@@ -13,6 +13,8 @@ module.exports = {
         teal: "rgb(124, 204, 191)",
         white: "rgb(255, 255, 255)",
         yellow: "rgb(255, 224, 117)",
+        "dark-green": "#216b5e",
+        beige: "#fff8d6",
       },
     },
   },
