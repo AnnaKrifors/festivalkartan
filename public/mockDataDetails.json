@@ -1,0 +1,55 @@
+[
+  {
+    "ID": 1,
+    "preface": "En stor scen som ligger på Fiskartorget i Västerås",
+    "body": "Gäster påMimerscnenen Etage har hela stadens utbud utanför dörren. Härifrån är det nära till allt, konferensanläggningar, restauranger och shopping. Hotellet har 93 trevliga rum till vilka gästerna serveras frukost, afternoon sweets och middag där allt ingår i rumspriset.",
+    "location": "string",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "ABB Arena Nord, Västerås"
+    },
+    "program": {
+      "artist": "Markoolio",
+      "time": "2024-07-07",
+      "description": "Markoolio sjunger och dansar"
+    }
+  },
+  {
+    "ID": 2,
+    "preface": "Entree som leder dig direkt in på festivalområdet",
+    "body": "Här måste du ha ett giltigt festivalarmband för att komma in",
+    "location": "string",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "Entree 1 som leder in till festivalen"
+    }
+  },
+  {
+    "ID": 3,
+    "preface": "En av våra toaletter som finns utsatta på festivalområdet",
+    "body": "I alla våra toaletter finns toalettpapper, handsprit samt andra hygienartiklar",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "en flyttbar toalett som smidigt kan användas"
+    }
+  },
+  {
+    "ID": 4,
+    "preface": "Pridetält där du kan få information om allt spännande som händer kring pride",
+    "body": "Föreningens syfte att synliggöra hbtq+-frågor och skapa en frizon för homosexuella, bisexuella, trans och queerpersoner och de könsuttryck som finns inom hbtq+-rörelsen. Årligen arrangeras festivalen Stockholm Pride som sedan 1998 är Nordens största Pridefestival.",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "en flyttbar toalett som smidigt kan användas"
+    }
+  }
+]

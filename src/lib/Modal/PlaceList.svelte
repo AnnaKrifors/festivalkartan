@@ -1,18 +1,8 @@
 <script lang="ts">
   import { placesStore } from "../../data/places";
-  import type { Facility } from "../../types/Place";
   import { setCurrentPlace } from "../../utils/marker";
   import Icon from "../Icon.svelte";
   import Filters from "./Filters.svelte";
-
-  const formatFacilityCapacity = (facility: Facility) => {
-    if (facility.name === "Evenemangsyta") {
-      return facility.name;
-    }
-    return `${facility.name}: ${
-      facility.capacity
-    } ${facility.unit.toLowerCase()}`;
-  };
 </script>
 
 <div class="px-2 pb-16 pt-4">
@@ -47,20 +37,17 @@
                 </span>
                 <Icon name="chevron" className="h-4 w-4 transform rotate-90" />
               </div>
-              {#each place.facilities as facility}
-                {#if facility.capacity}
-                  <div class="text-md flex items-center gap-2 pb-1">
-                    <Icon
-                      className="h-4 w-4 shrink-0"
-                      color="#ffe075"
-                      name={facility.name}
-                    />
-                    <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
-                      {formatFacilityCapacity(facility)}
-                    </p>
-                  </div>
-                {/if}
-              {/each}
+
+              <div class="text-md flex items-center gap-2 pb-1">
+                <Icon
+                  className="h-4 w-4 shrink-0"
+                  color="#ffe075"
+                  name={place.pinType}
+                />
+                <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
+                  {place.pinType}
+                </p>
+              </div>
             </div>
           </button>
         </li>

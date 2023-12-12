@@ -1,7 +1,15 @@
-const BASE_URL = "https://visitvasteras.se/wp-json/visit-vasteras";
-
-export const get = async <T>(url: string) => {
-  const response = await fetch(BASE_URL + url);
+export const get = async <T>() => {
+  const placesUrl = "mockData.json";
+  const response = await fetch(placesUrl);
   const data = await response.json();
+
+  return data as T;
+};
+
+export const getDetails = async <T>() => {
+  const detailsUrl = "mockDataDetails.json";
+  const response = await fetch(detailsUrl);
+  const data = await response.json();
+
   return data as T;
 };

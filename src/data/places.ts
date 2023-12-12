@@ -3,12 +3,15 @@ import type { Place } from "../types/Place";
 import { get } from "./fetch";
 
 const fetchPlaces = async () => {
-  const response = await get<Place[]>("/meetings");
+  const response = await get<Place[]>();
+
   for (const place of response) {
     place.selected = false;
   }
+
   return response;
 };
+
 
 /**
  * filters `placesStore`
@@ -24,12 +27,11 @@ export const currentPlace: Writable<Place | null> = writable(null);
 filterStore.subscribe((filters) => {
   placesStore.update((places) => {
     for (const place of places) {
+      
       // place is hidden if it doesn't have all facility names in `filters`
       // and the capacity of that facility is over 0
       place.hidden = !filters.every((filter) =>
-        place.facilities.some(
-          (facility) => facility.capacity > 0 && facility.name === filter,
-        ),
+      place.category === filter
       );
     }
     return places;

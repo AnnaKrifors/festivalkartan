@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import type { ContactInfo } from "../../types/PlaceDetails";
   import Icon from "../Icon.svelte";
 
@@ -59,4 +59,4 @@
       {/if}
     {/each}
   </address>
-</section>
+</section> -->

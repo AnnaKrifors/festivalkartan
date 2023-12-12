@@ -1,0 +1,85 @@
+[
+  {
+    "ID": 1,
+    "post_title": "mimerscenen",
+    "coordinates": {
+      "latitude": 59.60822315916402,
+      "longitude": 16.546228002229558
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Vasteras_ABB-Nord_Pressbild.jpg",
+        "alt": "Isbanan i Abb Arena Nord. Pressbild."
+      },
+      {
+        "url": "https://visitvasteras.se/app/uploads/2023/01/Vasteras_CVB_Rocklunda-Evenemangsomrade_Lennart-Hyse_001.jpg",
+        "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
+      }
+    ],
+    "videoOnTop": true,
+    "category": "stage",
+    "pinType": "scene",
+    "pinInfo": {
+      "pinNumber": "1b"
+    }
+  },
+  {
+    "ID": 2,
+    "post_title": "entré 1",
+    "coordinates": {
+      "latitude": 59.625614657821295,
+      "longitude": 16.531054973602295
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2023/01/Vasteras_CVB_Bomassan-021_Pressbild.jpg",
+        "alt": "Vy över bomässan i Abb Arena Syd. Pressbild."
+      }
+    ],
+    "videoOnTop": true,
+    "category": "entrance",
+    "pinType": "entrance",
+    "pinInfo": {
+      "pinNumber": "E3",
+      "ageLimit": 18
+    }
+  },
+  {
+    "ID": 3,
+    "post_title": "wc",
+    "coordinates": {
+      "latitude": 59.60736513409238,
+      "longitude": 16.54520641999012
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2020/01/Vasteras-Konserthus_Lasse-Fredriksson_012-scaled.jpg",
+        "alt": "bild på en bajamaja"
+      },
+      {
+        "url": "https://visitvasteras.se/app/uploads/2023/01/Vasteras_CVB_Rocklunda-Evenemangsomrade_Lennart-Hyse_001.jpg",
+        "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
+      }
+    ],
+    "videoOnTop": false,
+    "category": "important",
+    "pinType": "toilets"
+  },
+  {
+    "ID": 4,
+    "post_title": "pride",
+    "coordinates": {
+      "latitude": 59.61073069834125,
+      "longitude": 16.544378503942642
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "other",
+    "pinType": "pride"
+  }
+]

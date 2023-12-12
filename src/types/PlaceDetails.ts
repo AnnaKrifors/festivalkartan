@@ -1,17 +1,5 @@
 import type { Image } from "./Image";
 
-export type PlaceDetails = {
-  preface: string;
-  body: string;
-  contactInfo: ContactInfo;
-  location: string;
-  distanceToTrainStation: string;
-  enviromentCertification?: boolean; // I know this is a typo, but it's in the API
-  hotelStars: "Inga" | "1" | "2" | "3" | "4" | "5";
-  image: Image;
-  video: Video;
-};
-
 export type Video = {
   source: string;
   description: string;
@@ -22,4 +10,20 @@ export type ContactInfo = {
   address: string;
   phone: string;
   web: string;
+};
+
+type Program = {
+  artist: string;
+  date: Date;
+  description: string;
+};
+
+export type FestivalPlaceDetails = {
+  ID: number;
+  preface: string;
+  body: string;
+  location: string;
+  image: Image;
+  video?: Video;
+  program?: Program[];
 };

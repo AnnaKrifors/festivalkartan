@@ -8,7 +8,7 @@
   $: videoId = video?.source.split("/").pop()?.split("?")[0];
 </script>
 
-{#if video.type === "iframe"}
+{#if video?.type === "iframe"}
   {#if autoPlay}
     <div class="relative aspect-video w-full overflow-hidden md:aspect-[16/6]">
       <iframe
@@ -31,7 +31,7 @@
       class="aspect-video"
     />
   {/if}
-{:else if video.type === "video/mp4" || video.type === "video/webm"}
+{:else if video?.type === "video/mp4" || video?.type === "video/webm"}
   {#if autoPlay}
     <video
       autoplay

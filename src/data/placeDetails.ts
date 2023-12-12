@@ -1,11 +1,18 @@
 import { writable } from "svelte/store";
-import type { PlaceDetails } from "../types/PlaceDetails";
-import { get } from "./fetch";
+import type { FestivalPlaceDetails } from "../types/PlaceDetails";
+import { getDetails } from "./fetch";
 import { currentPlace } from "./places";
 
 const fetchPlaceDetails = async (id: number) => {
-  const response = await get<PlaceDetails>("/meeting/" + id);
-  return response;
+  const response = await getDetails<FestivalPlaceDetails[]>();
+
+  const placeDetails = response.find((item) => item.ID === id);
+
+  if (!placeDetails) {
+    throw new Error(`could not find ${id} `);
+  }
+
+  return placeDetails;
 };
 
 const getPlaceDetails = (id: number) => {
@@ -16,10 +23,10 @@ const getPlaceDetails = (id: number) => {
   });
 
   fetchPlaceDetails(id)
-    .then((placeDetails) => {
-      placeDetailsDictionary[id] = placeDetails;
+    .then((festivalPlaceDetails) => {
+      placeDetailsDictionary[id] = festivalPlaceDetails;
       placeDetailsStore.update((store) => {
-        store.placeDetails = placeDetails;
+        store.festivalPlaceDetails = festivalPlaceDetails;
         store.loading = false;
         return store;
       });
@@ -28,17 +35,18 @@ const getPlaceDetails = (id: number) => {
       placeDetailsStore.update((store) => {
         store.error = true;
         store.loading = false;
+
         return store;
       });
     });
 };
 
-const placeDetailsDictionary: { [id: number]: PlaceDetails } = {};
+const placeDetailsDictionary: { [id: number]: FestivalPlaceDetails } = {};
 
 export const placeDetailsStore = writable({
   loading: false,
   error: false,
-  placeDetails: undefined as PlaceDetails | undefined,
+  festivalPlaceDetails: undefined as FestivalPlaceDetails | undefined,
 });
 
 currentPlace.subscribe((place) => {
@@ -47,7 +55,7 @@ currentPlace.subscribe((place) => {
     getPlaceDetails(place.ID);
   } else {
     placeDetailsStore.update((store) => {
-      store.placeDetails = placeDetailsDictionary[place.ID];
+      store.festivalPlaceDetails = placeDetailsDictionary[place.ID];
       return store;
     });
   }

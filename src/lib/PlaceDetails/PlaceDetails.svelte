@@ -13,7 +13,8 @@
   placeDetailsStore.subscribe((value) => {
     loading = value.loading;
     error = value.error;
-    placeDetails = value.placeDetails;
+
+    placeDetails = value.festivalPlaceDetails;
   });
 </script>
 
@@ -54,7 +55,7 @@
       {:else}
         <ImageCarousel images={$currentPlaceStore?.images} />
       {/if}
-      <ContactInfo info={placeDetails.contactInfo} />
+      <!-- <ContactInfo info={placeDetails.contactInfo} /> -->
     </div>
   {/if}
 </div>

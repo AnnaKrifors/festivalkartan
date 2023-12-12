@@ -1,5 +1,6 @@
 <script lang="ts">
   import { filterStore, placesStore } from "../../data/places";
+  import { Category } from "../../types/Place";
   import Icon from "../Icon.svelte";
 
   let filters: string[] = [];
@@ -7,13 +8,11 @@
     if (filters.length > 0) {
       return;
     }
-    const uniqueFacilities = new Set<string>();
+    const uniqueCategories = new Set<string>();
     for (const place of places) {
-      for (const facility of place.facilities) {
-        uniqueFacilities.add(facility.name);
-      }
+      uniqueCategories.add(place.category);
     }
-    filters = Array.from(uniqueFacilities).filter(
+    filters = Array.from(uniqueCategories).filter(
       (filter) => !["Grupprum", "Konferensrum"].find((item) => filter === item),
     );
   });
@@ -40,7 +39,7 @@
     >
       <Icon className="h-5 w-5 flex-none" name={filter} />
       <span class="grow">
-        {filter}
+        {Category[filter]}
       </span>
       <input
         id={filter}
