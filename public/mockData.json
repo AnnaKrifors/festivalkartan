@@ -20,7 +20,7 @@
     "category": "stage",
     "pinType": "scene",
     "pinInfo": {
-      "pinNumber": "1b"
+      "ageLimit": 18
     }
   },
   {
@@ -40,7 +40,6 @@
     "category": "entrance",
     "pinType": "entrance",
     "pinInfo": {
-      "pinNumber": "E3",
       "ageLimit": 18
     }
   },

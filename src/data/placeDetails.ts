@@ -28,6 +28,7 @@ const getPlaceDetails = (id: number) => {
       placeDetailsStore.update((store) => {
         store.festivalPlaceDetails = festivalPlaceDetails;
         store.loading = false;
+
         return store;
       });
     })

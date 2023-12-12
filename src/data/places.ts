@@ -12,7 +12,6 @@ const fetchPlaces = async () => {
   return response;
 };
 
-
 /**
  * filters `placesStore`
  *  by the given facility names
@@ -27,12 +26,11 @@ export const currentPlace: Writable<Place | null> = writable(null);
 filterStore.subscribe((filters) => {
   placesStore.update((places) => {
     for (const place of places) {
-      
-      // place is hidden if it doesn't have all facility names in `filters`
-      // and the capacity of that facility is over 0
-      place.hidden = !filters.every((filter) =>
-      place.category === filter
-      );
+      if (filters.length === 0) {
+        place.hidden = false;
+      } else {
+        place.hidden = !filters.some((filter) => place.category === filter);
+      }
     }
     return places;
   });
