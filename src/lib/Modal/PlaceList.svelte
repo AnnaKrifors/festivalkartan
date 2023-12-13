@@ -28,14 +28,14 @@
             {:else}
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
-            <div class="bg-dark-green text-beige w-full overflow-hidden p-4">
+            <div class="w-full overflow-hidden bg-dark-green p-4 text-beige">
               <div class="align-center flex overflow-hidden pb-2">
                 <span
                   class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
                 >
                   {place.post_title}
                 </span>
-                <Icon name="chevron" className="h-4 w-4 transform rotate-90" />
+                <Icon name="chevron" className="transform h-6 w-6" />
               </div>
 
               <div class="text-md flex items-center gap-2 pb-1">

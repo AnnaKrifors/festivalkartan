@@ -62,7 +62,7 @@
     ],
     "videoOnTop": false,
     "category": "important",
-    "pinType": "toilets"
+    "pinType": "toilet"
   },
   {
     "ID": 4,
@@ -97,7 +97,8 @@
     "videoOnTop": false,
     "category": "important",
     "pinType": "drink-water"
-  },  {
+  },
+  {
     "ID": 6,
     "post_title": "wristband",
     "coordinates": {

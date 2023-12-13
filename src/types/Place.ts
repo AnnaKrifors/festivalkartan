@@ -1,11 +1,5 @@
 import type { Image } from "./Image";
 
-export type Facility = {
-  name: string;
-  capacity: number;
-  unit: string;
-};
-
 export enum Category {
   stage = "Scen",
   entrance = "Entré",
@@ -22,7 +16,7 @@ export type PinType =
   | "safetytent"
   | "wristband"
   | "red-cross"
-  | "toilets"
+  | "toilet"
   | "drink-water"
   | "entrance-fee";
 

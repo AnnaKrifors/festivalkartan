@@ -12,7 +12,7 @@
 >
   <Icon
     name="expand"
-    className={`h-5 w-5 ${
+    className={`h-8 w-8 ${
       expanded ? "transform rotate-180" : ""
     } transition-transform`}
   />
