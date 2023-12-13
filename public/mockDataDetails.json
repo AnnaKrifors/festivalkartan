@@ -51,5 +51,77 @@
       "type": "iframe",
       "description": "en flyttbar toalett som smidigt kan användas"
     }
+  },  
+  {
+    "ID": 5,
+    "preface": "Dricksvatten",
+    "body": "Färskt dricksvatten",
+    "location": "vid kranen",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "dricksvatten"
+    }
+  },  
+  {
+    "ID": 6,
+    "preface": "Byt till festivalarmband här!",
+    "body": "Byt ditt festivalarmband förklaring..",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "byt ditt festivalarmband här"
+    }
+  },  
+  {
+    "ID": 7,
+    "preface": "Nöjesfält som ger dig glädje!",
+    "body": "Nöjesfält med fart och fläkt.",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "nöjesfält"
+    }
+  },  
+  {
+    "ID": 8,
+    "preface": "Marknad där man kan köpa mat osv",
+    "body": "Stor blandning av mat och dryck",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "marknad"
+    }
+  },  
+  {
+    "ID": 9,
+    "preface": "Första hjälpen finns här!",
+    "body": "Första hjälpen finns här vid behov.",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "första hjälpen"
+    }
+  },  
+  {
+    "ID": 10,
+    "preface": "Trygghetstältet för dig som blivit utsatt",
+    "body": "Trygghetstältet för dig som behöver det!",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "trygghetstältet"
+    }
   }
 ]

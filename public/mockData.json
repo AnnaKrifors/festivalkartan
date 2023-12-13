@@ -3,8 +3,8 @@
     "ID": 1,
     "post_title": "mimerscenen",
     "coordinates": {
-      "latitude": 59.60822315916402,
-      "longitude": 16.546228002229558
+      "latitude": 59.6262741,
+      "longitude": 16.528614
     },
     "images": [
       {
@@ -45,10 +45,10 @@
   },
   {
     "ID": 3,
-    "post_title": "wc",
+    "post_title": "toalett",
     "coordinates": {
-      "latitude": 59.60736513409238,
-      "longitude": 16.54520641999012
+      "latitude": 59.57651463884297,
+      "longitude": 16.611292600000017
     },
     "images": [
       {
@@ -68,8 +68,8 @@
     "ID": 4,
     "post_title": "pride",
     "coordinates": {
-      "latitude": 59.61073069834125,
-      "longitude": 16.544378503942642
+      "latitude": 59.61032379269518,
+      "longitude": 16.550344680453847
     },
     "images": [
       {
@@ -80,5 +80,106 @@
     "videoOnTop": false,
     "category": "other",
     "pinType": "pride"
+  },
+  {
+    "ID": 5,
+    "post_title": "färskt kranvatten",
+    "coordinates": {
+      "latitude": 59.60984586103483,
+      "longitude": 16.546010971069336
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "important",
+    "pinType": "drink-water"
+  },  {
+    "ID": 6,
+    "post_title": "wristband",
+    "coordinates": {
+      "latitude": 59.606741151563575,
+      "longitude": 16.553006172180176
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "important",
+    "pinType": "wristband"
+  },
+  {
+    "ID": 7,
+    "post_title": "nöjesfält",
+    "coordinates": {
+      "latitude": 59.611408962827944,
+      "longitude": 16.54219150543213
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "other",
+    "pinType": "funfair"
+  },
+  {
+    "ID": 8,
+    "post_title": "marknad",
+    "coordinates": {
+      "latitude": 59.608008819379144,
+      "longitude": 16.5457227888855
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "other",
+    "pinType": "market"
+  },
+  {
+    "ID": 9,
+    "post_title": "röda korset",
+    "coordinates": {
+      "latitude": 59.637081182938445,
+      "longitude": 16.533994674682617
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "important",
+    "pinType": "red-cross"
+  },
+  {
+    "ID": 10,
+    "post_title": "trygghetstältet",
+    "coordinates": {
+      "latitude": 59.61099648469501,
+      "longitude": 16.549787521362305
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "category": "other",
+    "pinType": "safetytent"
   }
 ]
