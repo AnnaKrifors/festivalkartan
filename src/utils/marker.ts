@@ -37,7 +37,7 @@ export function addMarkers(places: Place[]): void {
     const el = document.createElement("div");
     el.id = place.ID.toString();
     el.className = "map-pin";
-    el.innerHTML = markerSvg(place.post_title);
+    checkMarkerType(place, el);
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
@@ -53,6 +53,15 @@ export function addMarkers(places: Place[]): void {
       setCurrentPlace(place);
     });
     markers.push(marker);
+  }
+}
+//checks what kind of pin is being used and changes
+//fetches the corresponding svg for it.
+function checkMarkerType(place: Place, el: Element) {
+  if (place.pinType === "pride") {
+    return (el.innerHTML = markerSvgPride(place.pinType));
+  } else {
+    return (el.innerHTML = markerSvg(place.pinType));
   }
 }
 
@@ -99,7 +108,7 @@ export function unsetCurrentPlace() {
   if (!current) return;
   const currEl = document.getElementById(current.ID.toString());
   if (currEl) {
-    currEl.innerHTML = markerSvg(current.post_title);
+    checkMarkerType(current, currEl);
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
@@ -114,6 +123,40 @@ function removeMarkers(): void {
   markers.forEach((marker) => marker.remove());
   markers = [];
 }
+
+const markerSvgPride = (title: string) => `
+<div class="pin-label absolute left-1/2 transform -translate-x-1/2 -translate-y-full text-center text-sm whitespace-nowrap bg-slate-100 p-1 border-2 border-[#003E4A] rounded">${title}</div>
+<svg
+  viewBox="29 19 56 69"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  <defs>
+  <linearGradient id="myGradient" gradientTransform="rotate(70)">
+    <stop offset="14.28%" stop-color="#E40303" />
+    <stop offset="28.56%" stop-color="#FF8C00" />
+    <stop offset="42.84%" stop-color="#FFED00" />
+    <stop offset="57.12%" stop-color="#008026" />
+    <stop offset="71.4%" stop-color="#24408E" />
+    <stop offset="84.68%" stop-color="#732982" />
+  </linearGradient>
+</defs>
+>
+  <path
+    d="M82 44.924C82 47.3495 81.1181 50.4905 79.4855 54.1333C77.8729 57.7311 75.6242 61.6101 73.1108 65.4502C68.0868 73.1264 62.1381 80.4474 58.4909 84.7467C57.7274 85.6381 56.2726 85.6381 55.5091 84.7467C51.8619 80.4474 45.9132 73.1264 40.8892 65.4502C38.3758 61.6101 36.1271 57.7311 34.5146 54.1333C32.8819 50.4905 32 47.3495 32 44.924C32 32.1435 43.0553 21.5219 57 21.5219C70.9447 21.5219 82 32.1435 82 44.924Z"
+    fill="url(#myGradient)"
+    stroke="#003E4A"
+    stroke-width="5"
+  />
+  <path
+    d="M64.5943 42.1472C64.5943 46.4765 61.0824 49.9862 56.7502 49.9862C52.418 49.9862 48.906 46.4765 48.906 42.1472C48.906 37.8179 52.418 34.3082 56.7502 34.3082C61.0824 34.3082 64.5943 37.8179 64.5943 42.1472Z"
+    fill="#003E4A"
+  />
+  <path
+    d="M64.5943 42.1472C64.5943 46.4765 61.0824 49.9862 56.7502 49.9862C52.418 49.9862 48.906 46.4765 48.906 42.1472C48.906 37.8179 52.418 34.3082 56.7502 34.3082C61.0824 34.3082 64.5943 37.8179 64.5943 42.1472Z"
+    stroke="#7CCCBF"
+  />
+</svg>
+`;
 
 const markerSvg = (title: string) => `
 <div class="pin-label absolute left-1/2 transform -translate-x-1/2 -translate-y-full text-center text-sm whitespace-nowrap bg-slate-100 p-1 border-2 border-[#003E4A] rounded">${title}</div>
