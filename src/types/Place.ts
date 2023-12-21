@@ -7,18 +7,20 @@ export enum Category {
   other = "Övrigt",
 }
 
-export type PinType =
-  | "scene"
-  | "entrance"
-  | "funfair"
-  | "market"
-  | "pride"
-  | "safetytent"
-  | "wristband"
-  | "red-cross"
-  | "toilet"
-  | "drink-water"
-  | "entrance-fee";
+export const MarkerType = {
+  scene: "Scen",
+  entrance: "Entré",
+  funfair: "Nöjesfält",
+  market: "Marknad",
+  pride: "Pride",
+  safetytent: "Trygghetstält",
+  wristband: "Byt till festivalarmband",
+  toilet: "Toalett",
+  "drink-water": "Dricksvatten",
+  "red-cross": "Röda Korset",
+} as const;
+
+export type MarkerType = keyof typeof MarkerType;
 
 export type Place = {
   ID: number;
@@ -32,9 +34,9 @@ export type Place = {
   hidden?: boolean;
   videoOnTop: boolean;
   category: Category;
-  pinType: PinType;
-  pinInfo?: {
-    pinNumber?: string;
+  markerType: MarkerType;
+  markerInfo?: {
+    markerNumber?: string;
     ageLimit?: number;
   };
 };

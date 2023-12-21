@@ -1,5 +1,6 @@
 <script lang="ts">
   import { placesStore } from "../../data/places";
+  import { MarkerType } from "../../types/Place";
   import { setCurrentPlace } from "../../utils/marker";
   import Icon from "../Icon.svelte";
   import Filters from "./Filters.svelte";
@@ -28,7 +29,7 @@
             {:else}
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
-            <div class="w-full overflow-hidden bg-dark-green p-4 text-beige">
+            <div class="bg-dark-green text-beige w-full overflow-hidden p-4">
               <div class="align-center flex overflow-hidden pb-2">
                 <span
                   class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
@@ -42,10 +43,10 @@
                 <Icon
                   className="h-4 w-4 shrink-0"
                   color="#ffe075"
-                  name={place.pinType}
+                  name={place.markerType}
                 />
                 <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
-                  {place.pinType}
+                  {MarkerType[place.markerType]}
                 </p>
               </div>
             </div>

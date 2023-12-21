@@ -18,8 +18,8 @@
     ],
     "videoOnTop": true,
     "category": "stage",
-    "pinType": "scene",
-    "pinInfo": {
+    "markerType": "scene",
+    "markerInfo": {
       "ageLimit": 18
     }
   },
@@ -38,8 +38,8 @@
     ],
     "videoOnTop": true,
     "category": "entrance",
-    "pinType": "entrance",
-    "pinInfo": {
+    "markerType": "entrance",
+    "markerInfo": {
       "ageLimit": 18
     }
   },
@@ -62,7 +62,7 @@
     ],
     "videoOnTop": false,
     "category": "important",
-    "pinType": "toilet"
+    "markerType": "toilet"
   },
   {
     "ID": 4,
@@ -79,7 +79,7 @@
     ],
     "videoOnTop": false,
     "category": "other",
-    "pinType": "pride"
+    "markerType": "pride"
   },
   {
     "ID": 5,
@@ -96,7 +96,7 @@
     ],
     "videoOnTop": false,
     "category": "important",
-    "pinType": "drink-water"
+    "markerType": "drink-water"
   },
   {
     "ID": 6,
@@ -113,7 +113,7 @@
     ],
     "videoOnTop": false,
     "category": "important",
-    "pinType": "wristband"
+    "markerType": "wristband"
   },
   {
     "ID": 7,
@@ -130,7 +130,7 @@
     ],
     "videoOnTop": false,
     "category": "other",
-    "pinType": "funfair"
+    "markerType": "funfair"
   },
   {
     "ID": 8,
@@ -147,7 +147,7 @@
     ],
     "videoOnTop": false,
     "category": "other",
-    "pinType": "market"
+    "markerType": "market"
   },
   {
     "ID": 9,
@@ -164,7 +164,7 @@
     ],
     "videoOnTop": false,
     "category": "important",
-    "pinType": "red-cross"
+    "markerType": "red-cross"
   },
   {
     "ID": 10,
@@ -181,6 +181,6 @@
     ],
     "videoOnTop": false,
     "category": "other",
-    "pinType": "safetytent"
+    "markerType": "safetytent"
   }
 ]

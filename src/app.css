@@ -125,14 +125,14 @@ div.mapboxgl-popup-content,
   font-family: Visit VG;
 }
 
-.pin-label {
+.marker-label {
   display: none;
 }
 
-.map-pin:hover {
+.map-marker:hover {
   z-index: 2 !important;
 }
 
-.map-pin:hover > .pin-label {
+.map-marker:hover > .marker-label {
   display: block;
 }
