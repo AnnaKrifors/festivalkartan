@@ -6,7 +6,7 @@
   import Filters from "./Filters.svelte";
 </script>
 
-<div class="px-2 pb-16 pt-4">
+<div class="px-2 pb-16 md:pt-4">
   <Filters />
   <ul>
     {#each $placesStore as place}
@@ -29,7 +29,7 @@
             {:else}
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
-            <div class="bg-dark-green text-beige w-full overflow-hidden p-4">
+            <div class="w-full overflow-hidden bg-dark-green p-4 text-beige">
               <div class="align-center flex overflow-hidden pb-2">
                 <span
                   class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"

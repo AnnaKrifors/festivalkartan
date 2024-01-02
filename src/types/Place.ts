@@ -14,7 +14,7 @@ export const MarkerType = {
   market: "Marknad",
   pride: "Pride",
   safetytent: "Trygghetstält",
-  wristband: "Byt till festivalarmband",
+  wristband: "Festivalarmband",
   toilet: "Toalett",
   "drink-water": "Dricksvatten",
   "red-cross": "Röda Korset",

@@ -1,19 +1,23 @@
 <script lang="ts">
   import { filterStore, placesStore } from "../../data/places";
-  import { Category } from "../../types/Place";
-  import Icon from "../Icon.svelte";
+  import { MarkerType } from "../../types/Place";
+  import { getMarkerByType } from "../../utils/marker";
 
-  let filters: string[] = [];
+  let filters: MarkerType[] = [];
+
   placesStore.subscribe((places) => {
     if (filters.length > 0) {
       return;
     }
-    const uniqueCategories = new Set<string>();
+    const uniqueMarkerTypes = new Set<MarkerType>();
     for (const place of places) {
-      uniqueCategories.add(place.category);
+      uniqueMarkerTypes.add(place.markerType);
     }
-    filters = Array.from(uniqueCategories).filter(
-      (filter) => !["Grupprum", "Konferensrum"].find((item) => filter === item),
+    filters = Array.from(uniqueMarkerTypes).filter(
+      (filter) =>
+        !["safetytent", "market", "entrance_fee"].find(
+          (item) => filter === item,
+        ),
     );
   });
 
@@ -37,9 +41,12 @@
       class="relative flex cursor-pointer items-center gap-2 border border-[#003E4A]/70 bg-white p-2 text-sm font-semibold text-[#003E4A] transition focus-within:ring-2 focus-within:ring-[#003E4A] focus-within:ring-offset-2 focus-within:ring-offset-white hover:bg-[#F7A1A1]/30"
       for={filter}
     >
-      <Icon className="h-5 w-5 flex-none" name={filter} />
+      <div class="flex h-5 w-5 items-center justify-center">
+        {@html getMarkerByType(filter)}
+      </div>
+
       <span class="grow">
-        {Category[filter]}
+        {MarkerType[filter]}
       </span>
       <input
         id={filter}

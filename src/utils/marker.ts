@@ -15,6 +15,7 @@ import {
   toiletMarker,
   waterMarker,
   wristBandMarker,
+  markerLabel,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -49,12 +50,15 @@ export function addMarkers(places: Place[]) {
     if (!place.coordinates) continue;
     const el = document.createElement("div");
     el.id = place.ID.toString();
-    el.className = "map-marker";
-    el.innerHTML = getMarkerByType(place.markerType);
+    el.className =
+      "map-marker hover:drop-shadow-markerShadow bg-slate-50 rounded-full flex justify-center items-center";
+    el.innerHTML += markerLabel(MarkerType[place.markerType]);
+    el.innerHTML += getMarkerByType(place.markerType);
+
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
-      el.querySelector(".marker-container").style[key] = markerStyle[key];
+      el.closest(".map-marker").style[key] = markerStyle[key];
     });
 
     let marker = new maplibregl.Marker(el)
@@ -69,38 +73,38 @@ export function addMarkers(places: Place[]) {
   }
 }
 
-function getMarkerByType(currMarker: MarkerType) {
+export function getMarkerByType(currMarker: MarkerType) {
   if (currMarker === "pride") {
-    return prideMarker(MarkerType[currMarker]);
+    return prideMarker();
   }
   if (currMarker === "scene") {
-    return sceneAreasMarker(MarkerType[currMarker]);
+    return sceneAreasMarker();
   }
   if (currMarker === "wristband") {
-    return wristBandMarker(MarkerType[currMarker]);
+    return wristBandMarker();
   }
   if (currMarker === "toilet") {
-    return toiletMarker(MarkerType[currMarker]);
+    return toiletMarker();
   }
   if (currMarker === "entrance") {
-    return entranceMarker(MarkerType[currMarker]);
+    return entranceMarker();
   }
   if (currMarker === "drink-water") {
-    return waterMarker(MarkerType[currMarker]);
+    return waterMarker();
   }
   if (currMarker === "red-cross") {
-    return redcrossMarker(MarkerType[currMarker]);
+    return redcrossMarker();
   }
   if (currMarker === "market") {
-    return marketMarker(MarkerType[currMarker]);
+    return marketMarker();
   }
   if (currMarker === "funfair") {
-    return funfairMarker(MarkerType[currMarker]);
+    return funfairMarker();
   }
   if (currMarker === "safetytent") {
-    return safetytentMarker(MarkerType[currMarker]);
+    return safetytentMarker();
   }
-  return defaultMarker(MarkerType[currMarker]);
+  return defaultMarker();
 }
 
 function getMapOffset() {
@@ -122,9 +126,7 @@ export function setCurrentPlace(place: Place) {
   if (!place.coordinates) return;
 
   if (!current) return;
-  const currEl = document
-    .getElementById(current.ID.toString())
-    ?.querySelector(".marker-container");
+  const currEl = document.getElementById(current.ID.toString());
 
   if (currEl !== null && currEl !== undefined) {
     ["outline", "outline-2", "outline-black", "drop-shadow-markerShadow"].map(
@@ -152,9 +154,7 @@ function zoomMarkerBounds() {
 
 export function unsetCurrentPlace() {
   if (!current) return;
-  const currEl = document
-    .getElementById(current.ID.toString())
-    ?.querySelector(".marker-container");
+  const currEl = document.getElementById(current.ID.toString());
 
   if (currEl !== null && currEl !== undefined) {
     ["outline", "outline-2", "outline-black", "drop-shadow-markerShadow"].map(

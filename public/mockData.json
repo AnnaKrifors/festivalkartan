@@ -182,5 +182,29 @@
     "videoOnTop": false,
     "category": "other",
     "markerType": "safetytent"
+  },
+  {
+    "ID": 11,
+    "post_title": "Storascenen",
+    "coordinates": {
+      "latitude": 59.60368946027066,
+      "longitude": 16.518541770445953
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Vasteras_ABB-Nord_Pressbild.jpg",
+        "alt": "Isbanan i Abb Arena Nord. Pressbild."
+      },
+      {
+        "url": "https://visitvasteras.se/app/uploads/2023/01/Vasteras_CVB_Rocklunda-Evenemangsomrade_Lennart-Hyse_001.jpg",
+        "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
+      }
+    ],
+    "videoOnTop": false,
+    "category": "stage",
+    "markerType": "scene",
+    "markerInfo": {
+      "ageLimit": 18
+    }
   }
 ]

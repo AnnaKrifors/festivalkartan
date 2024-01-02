@@ -51,7 +51,7 @@
       "type": "iframe",
       "description": "en flyttbar toalett som smidigt kan användas"
     }
-  },  
+  },
   {
     "ID": 5,
     "preface": "Dricksvatten",
@@ -63,7 +63,7 @@
       "type": "iframe",
       "description": "dricksvatten"
     }
-  },  
+  },
   {
     "ID": 6,
     "preface": "Byt till festivalarmband här!",
@@ -75,7 +75,7 @@
       "type": "iframe",
       "description": "byt ditt festivalarmband här"
     }
-  },  
+  },
   {
     "ID": 7,
     "preface": "Nöjesfält som ger dig glädje!",
@@ -87,7 +87,7 @@
       "type": "iframe",
       "description": "nöjesfält"
     }
-  },  
+  },
   {
     "ID": 8,
     "preface": "Marknad där man kan köpa mat osv",
@@ -99,7 +99,7 @@
       "type": "iframe",
       "description": "marknad"
     }
-  },  
+  },
   {
     "ID": 9,
     "preface": "Första hjälpen finns här!",
@@ -111,11 +111,23 @@
       "type": "iframe",
       "description": "första hjälpen"
     }
-  },  
+  },
   {
     "ID": 10,
     "preface": "Trygghetstältet för dig som blivit utsatt",
     "body": "Trygghetstältet för dig som behöver det!",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "trygghetstältet"
+    }
+  },
+  {
+    "ID": 11,
+    "preface": "Största scenen på hela festivalen",
+    "body": "Stor scen för dig som behöver det!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
     "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {

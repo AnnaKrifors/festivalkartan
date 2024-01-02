@@ -36,7 +36,7 @@
       }}
       {expanded}
     />
-    <div class={`flex justify-between p-2 ${closed ? "invisible" : ""}`}>
+    <div class={`flex justify-between px-2 pt-2 ${closed ? "invisible" : ""}`}>
       <BackButton />
       <CloseButton
         onClick={() => {
@@ -55,7 +55,7 @@
           ? "invisible max-h-0"
           : expanded
             ? "max-h-[calc(100vh-11rem)]"
-            : "max-h-[22vh] md:max-h-[40vh]"
+            : "max-h-[12rem] md:max-h-[40vh]"
       } h-[calc(100vh-5rem)] w-[40rem] max-w-full overflow-y-scroll transition-all xl:w-[48rem]`}
     >
       {#if !$currentPlace}
