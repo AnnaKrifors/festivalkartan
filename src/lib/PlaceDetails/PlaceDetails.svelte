@@ -1,6 +1,7 @@
 <script lang="ts">
   import { placeDetailsStore } from "../../data/placeDetails";
   import { currentPlace as currentPlaceStore } from "../../data/places";
+  import About from "./About.svelte";
   import Header from "./Header.svelte";
   import ImageCarousel from "./ImageCarousel.svelte";
   import Video from "./Video.svelte";
@@ -29,10 +30,10 @@
     </div>
   {:else if placeDetails}
     <Header
-      title={$currentPlaceStore?.post_title}
+      title={$currentPlaceStore?.postTitle}
       images={$currentPlaceStore?.images}
       video={placeDetails?.video}
-      videoOnTop={$currentPlaceStore?.video_on_top}
+      videoOnTop={$currentPlaceStore?.videoOnTop}
     />
     <div class="p-10">
       <p class="text-center text-xl">{@html placeDetails?.preface}</p>
@@ -40,6 +41,7 @@
     <div
       class="w-100 flex-grow justify-between max-sm:flex max-sm:flex-col-reverse sm:px-10"
     >
+      <About />
       <div class="mb-auto">
         <div class="mb-10 max-sm:px-10">
           <p class="text-lg">{@html placeDetails?.body}</p>
@@ -47,7 +49,7 @@
       </div>
     </div>
     <div class="clear-right mt-auto">
-      {#if !$currentPlaceStore?.video_on_top}
+      {#if !$currentPlaceStore?.videoOnTop}
         <Video video={placeDetails.video} />
       {:else}
         <ImageCarousel images={$currentPlaceStore?.images} />

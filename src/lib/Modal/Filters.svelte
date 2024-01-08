@@ -11,7 +11,7 @@
     }
     const uniqueMarkerTypes = new Set<MarkerType>();
     for (const place of places) {
-      uniqueMarkerTypes.add(place.marker_type);
+      uniqueMarkerTypes.add(place.markerType);
     }
     filters = Array.from(uniqueMarkerTypes).filter(
       (filter) =>

@@ -1,7 +1,7 @@
 [
   {
     "ID": 1,
-    "post_title": "mimerscenen",
+    "postTitle": "mimerscenen",
     "coordinates": {
       "latitude": 59.6262741,
       "longitude": 16.528614
@@ -16,12 +16,12 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "video_on_top": true,
-    "marker_type": "scene"
+    "videoOnTop": true,
+    "markerType": "scene"
   },
   {
     "ID": 2,
-    "post_title": "entré 1",
+    "postTitle": "entré 1",
     "coordinates": {
       "latitude": 59.625614657821295,
       "longitude": 16.531054973602295
@@ -32,12 +32,12 @@
         "alt": "Vy över bomässan i Abb Arena Syd. Pressbild."
       }
     ],
-    "video_on_top": true,
-    "marker_type": "entrance"
+    "videoOnTop": true,
+    "markerType": "entrance"
   },
   {
     "ID": 3,
-    "post_title": "toalett",
+    "postTitle": "toalett",
     "coordinates": {
       "latitude": 59.57651463884297,
       "longitude": 16.611292600000017
@@ -52,12 +52,12 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "video_on_top": false,
-    "marker_type": "toilet"
+    "videoOnTop": false,
+    "markerType": "toilet"
   },
   {
     "ID": 4,
-    "post_title": "pride",
+    "postTitle": "pride",
     "coordinates": {
       "latitude": 59.61032379269518,
       "longitude": 16.550344680453847
@@ -68,12 +68,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "pride"
+    "videoOnTop": false,
+    "markerType": "pride"
   },
   {
     "ID": 5,
-    "post_title": "dricksvatten",
+    "postTitle": "dricksvatten",
     "coordinates": {
       "latitude": 59.60984586103483,
       "longitude": 16.546010971069336
@@ -84,12 +84,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "drink_water"
+    "videoOnTop": false,
+    "markerType": "drinkWater"
   },
   {
     "ID": 6,
-    "post_title": "festivalarmband",
+    "postTitle": "festivalarmband",
     "coordinates": {
       "latitude": 59.606741151563575,
       "longitude": 16.553006172180176
@@ -100,12 +100,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "wristband"
+    "videoOnTop": false,
+    "markerType": "wristband"
   },
   {
     "ID": 7,
-    "post_title": "nöjesfält",
+    "postTitle": "nöjesfält",
     "coordinates": {
       "latitude": 59.611408962827944,
       "longitude": 16.54219150543213
@@ -116,12 +116,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "funfair"
+    "videoOnTop": false,
+    "markerType": "funfair"
   },
   {
     "ID": 8,
-    "post_title": "marknad",
+    "postTitle": "marknad",
     "coordinates": {
       "latitude": 59.608008819379144,
       "longitude": 16.5457227888855
@@ -132,12 +132,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "market"
+    "videoOnTop": false,
+    "markerType": "market"
   },
   {
     "ID": 9,
-    "post_title": "röda korset",
+    "postTitle": "röda korset",
     "coordinates": {
       "latitude": 59.637081182938445,
       "longitude": 16.533994674682617
@@ -148,12 +148,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "red_cross"
+    "videoOnTop": false,
+    "markerType": "redCross"
   },
   {
     "ID": 10,
-    "post_title": "trygghetstältet",
+    "postTitle": "trygghetstältet",
     "coordinates": {
       "latitude": 59.61099648469501,
       "longitude": 16.549787521362305
@@ -164,12 +164,12 @@
         "alt": ""
       }
     ],
-    "video_on_top": false,
-    "marker_type": "safetytent"
+    "videoOnTop": false,
+    "markerType": "safetytent"
   },
   {
     "ID": 11,
-    "post_title": "storascenen",
+    "postTitle": "storascenen",
     "coordinates": {
       "latitude": 59.60368946027066,
       "longitude": 16.518541770445953
@@ -184,7 +184,7 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "video_on_top": false,
-    "marker_type": "scene"
+    "videoOnTop": false,
+    "markerType": "scene"
   }
 ]

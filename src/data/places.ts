@@ -29,7 +29,7 @@ filterStore.subscribe((filters) => {
       if (filters.length === 0) {
         place.hidden = false;
       } else {
-        place.hidden = !filters.some((filter) => place.marker_type === filter);
+        place.hidden = !filters.some((filter) => place.markerType === filter);
       }
     }
     return places;

@@ -9,8 +9,8 @@ export const MarkerType = {
   safetytent: "Trygghetstält",
   wristband: "Festivalarmband",
   toilet: "Toalett",
-  drink_water: "Dricksvatten",
-  red_cross: "Röda Korset",
+  drinkWater: "Dricksvatten",
+  redCross: "Röda Korset",
 } as const;
 
 export type MarkerType = keyof typeof MarkerType;
@@ -22,9 +22,9 @@ export type Place = {
     longitude: number;
   };
   images: Image[];
-  post_title: string;
+  postTitle: string;
   selected?: boolean;
   hidden?: boolean;
-  video_on_top: boolean;
-  marker_type: MarkerType;
+  videoOnTop: boolean;
+  markerType: MarkerType;
 };

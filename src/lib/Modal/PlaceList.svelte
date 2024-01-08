@@ -34,7 +34,7 @@
                 <span
                   class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
                 >
-                  {place.post_title}
+                  {place.postTitle}
                 </span>
                 <Icon name="chevron" className="transform h-6 w-6" />
               </div>
@@ -43,10 +43,10 @@
                 <Icon
                   className="h-4 w-4 shrink-0"
                   color="#ffe075"
-                  name={place.marker_type}
+                  name={place.markerType}
                 />
                 <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
-                  {MarkerType[place.marker_type]}
+                  {MarkerType[place.markerType]}
                 </p>
               </div>
             </div>
