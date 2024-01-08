@@ -43,10 +43,10 @@
                 <Icon
                   className="h-4 w-4 shrink-0"
                   color="#ffe075"
-                  name={place.markerType}
+                  name={place.marker_type}
                 />
                 <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
-                  {MarkerType[place.markerType]}
+                  {MarkerType[place.marker_type]}
                 </p>
               </div>
             </div>

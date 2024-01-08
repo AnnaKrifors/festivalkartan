@@ -16,12 +16,8 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "videoOnTop": true,
-    "category": "stage",
-    "markerType": "scene",
-    "markerInfo": {
-      "ageLimit": 18
-    }
+    "video_on_top": true,
+    "marker_type": "scene"
   },
   {
     "ID": 2,
@@ -36,12 +32,8 @@
         "alt": "Vy över bomässan i Abb Arena Syd. Pressbild."
       }
     ],
-    "videoOnTop": true,
-    "category": "entrance",
-    "markerType": "entrance",
-    "markerInfo": {
-      "ageLimit": 18
-    }
+    "video_on_top": true,
+    "marker_type": "entrance"
   },
   {
     "ID": 3,
@@ -60,9 +52,8 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "videoOnTop": false,
-    "category": "important",
-    "markerType": "toilet"
+    "video_on_top": false,
+    "marker_type": "toilet"
   },
   {
     "ID": 4,
@@ -77,13 +68,12 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "other",
-    "markerType": "pride"
+    "video_on_top": false,
+    "marker_type": "pride"
   },
   {
     "ID": 5,
-    "post_title": "färskt kranvatten",
+    "post_title": "dricksvatten",
     "coordinates": {
       "latitude": 59.60984586103483,
       "longitude": 16.546010971069336
@@ -94,13 +84,12 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "important",
-    "markerType": "drink-water"
+    "video_on_top": false,
+    "marker_type": "drink_water"
   },
   {
     "ID": 6,
-    "post_title": "wristband",
+    "post_title": "festivalarmband",
     "coordinates": {
       "latitude": 59.606741151563575,
       "longitude": 16.553006172180176
@@ -111,9 +100,8 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "important",
-    "markerType": "wristband"
+    "video_on_top": false,
+    "marker_type": "wristband"
   },
   {
     "ID": 7,
@@ -128,9 +116,8 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "other",
-    "markerType": "funfair"
+    "video_on_top": false,
+    "marker_type": "funfair"
   },
   {
     "ID": 8,
@@ -145,9 +132,8 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "other",
-    "markerType": "market"
+    "video_on_top": false,
+    "marker_type": "market"
   },
   {
     "ID": 9,
@@ -162,9 +148,8 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "important",
-    "markerType": "red-cross"
+    "video_on_top": false,
+    "marker_type": "red_cross"
   },
   {
     "ID": 10,
@@ -179,13 +164,12 @@
         "alt": ""
       }
     ],
-    "videoOnTop": false,
-    "category": "other",
-    "markerType": "safetytent"
+    "video_on_top": false,
+    "marker_type": "safetytent"
   },
   {
     "ID": 11,
-    "post_title": "Storascenen",
+    "post_title": "storascenen",
     "coordinates": {
       "latitude": 59.60368946027066,
       "longitude": 16.518541770445953
@@ -200,11 +184,7 @@
         "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
       }
     ],
-    "videoOnTop": false,
-    "category": "stage",
-    "markerType": "scene",
-    "markerInfo": {
-      "ageLimit": 18
-    }
+    "video_on_top": false,
+    "marker_type": "scene"
   }
 ]

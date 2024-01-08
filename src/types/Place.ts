@@ -1,12 +1,5 @@
 import type { Image } from "./Image";
 
-export enum Category {
-  stage = "Scen",
-  entrance = "Entré",
-  important = "Viktigt",
-  other = "Övrigt",
-}
-
 export const MarkerType = {
   scene: "Scen",
   entrance: "Entré",
@@ -16,8 +9,8 @@ export const MarkerType = {
   safetytent: "Trygghetstält",
   wristband: "Festivalarmband",
   toilet: "Toalett",
-  "drink-water": "Dricksvatten",
-  "red-cross": "Röda Korset",
+  drink_water: "Dricksvatten",
+  red_cross: "Röda Korset",
 } as const;
 
 export type MarkerType = keyof typeof MarkerType;
@@ -32,11 +25,6 @@ export type Place = {
   post_title: string;
   selected?: boolean;
   hidden?: boolean;
-  videoOnTop: boolean;
-  category: Category;
-  markerType: MarkerType;
-  markerInfo?: {
-    markerNumber?: string;
-    ageLimit?: number;
-  };
+  video_on_top: boolean;
+  marker_type: MarkerType;
 };

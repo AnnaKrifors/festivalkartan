@@ -1,10 +1,10 @@
 import { writable } from "svelte/store";
-import type { FestivalPlaceDetails } from "../types/PlaceDetails";
+import type { PlaceDetails } from "../types/PlaceDetails";
 import { getDetails } from "./fetch";
 import { currentPlace } from "./places";
 
 const fetchPlaceDetails = async (id: number) => {
-  const response = await getDetails<FestivalPlaceDetails[]>();
+  const response = await getDetails<PlaceDetails[]>();
 
   const placeDetails = response.find((item) => item.ID === id);
 
@@ -23,10 +23,10 @@ const getPlaceDetails = (id: number) => {
   });
 
   fetchPlaceDetails(id)
-    .then((festivalPlaceDetails) => {
-      placeDetailsDictionary[id] = festivalPlaceDetails;
+    .then((placeDetails) => {
+      placeDetailsDictionary[id] = placeDetails;
       placeDetailsStore.update((store) => {
-        store.festivalPlaceDetails = festivalPlaceDetails;
+        store.placeDetails = placeDetails;
         store.loading = false;
 
         return store;
@@ -42,12 +42,12 @@ const getPlaceDetails = (id: number) => {
     });
 };
 
-const placeDetailsDictionary: { [id: number]: FestivalPlaceDetails } = {};
+const placeDetailsDictionary: { [id: number]: PlaceDetails } = {};
 
 export const placeDetailsStore = writable({
   loading: false,
   error: false,
-  festivalPlaceDetails: undefined as FestivalPlaceDetails | undefined,
+  placeDetails: undefined as PlaceDetails | undefined,
 });
 
 currentPlace.subscribe((place) => {
@@ -56,7 +56,7 @@ currentPlace.subscribe((place) => {
     getPlaceDetails(place.ID);
   } else {
     placeDetailsStore.update((store) => {
-      store.festivalPlaceDetails = placeDetailsDictionary[place.ID];
+      store.placeDetails = placeDetailsDictionary[place.ID];
       return store;
     });
   }

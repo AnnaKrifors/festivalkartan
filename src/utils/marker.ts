@@ -52,8 +52,8 @@ export function addMarkers(places: Place[]) {
     el.id = place.ID.toString();
     el.className =
       "map-marker hover:drop-shadow-markerShadow bg-slate-50 rounded-full flex justify-center items-center";
-    el.innerHTML += markerLabel(MarkerType[place.markerType]);
-    el.innerHTML += getMarkerByType(place.markerType);
+    el.innerHTML += markerLabel(MarkerType[place.marker_type]);
+    el.innerHTML += getMarkerByType(place.marker_type);
 
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
@@ -89,10 +89,10 @@ export function getMarkerByType(currMarker: MarkerType) {
   if (currMarker === "entrance") {
     return entranceMarker();
   }
-  if (currMarker === "drink-water") {
+  if (currMarker === "drink_water") {
     return waterMarker();
   }
-  if (currMarker === "red-cross") {
+  if (currMarker === "red_cross") {
     return redcrossMarker();
   }
   if (currMarker === "market") {

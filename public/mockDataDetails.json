@@ -10,11 +10,19 @@
       "type": "iframe",
       "description": "ABB Arena Nord, Västerås"
     },
-    "program": {
-      "artist": "Markoolio",
-      "time": "2024-07-07",
-      "description": "Markoolio sjunger och dansar"
-    }
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "age_limit": 18,
+    "entrance_fee": false,
+    "program_link": "www.cityfestivalen.se/program"
   },
   {
     "ID": 2,
@@ -26,7 +34,20 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "Entree 1 som leder in till festivalen"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "age_limit": 18,
+    "entrance_fee": true,
+    "program_link": "www.cityfestivalen.se/program"
   },
   {
     "ID": 3,
@@ -38,7 +59,18 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "en flyttbar toalett som smidigt kan användas"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "entrance_fee": false
   },
   {
     "ID": 4,
@@ -50,7 +82,19 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "en flyttbar toalett som smidigt kan användas"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "entrance_fee": false,
+    "program_link": "www.cityfestivalen.se/program"
   },
   {
     "ID": 5,
@@ -62,7 +106,18 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "dricksvatten"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "entrance_fee": false
   },
   {
     "ID": 6,
@@ -74,7 +129,18 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "byt ditt festivalarmband här"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ],
+    "entrance_fee": true
   },
   {
     "ID": 7,
@@ -86,7 +152,17 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "nöjesfält"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ]
   },
   {
     "ID": 8,
@@ -98,7 +174,17 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "marknad"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ]
   },
   {
     "ID": 9,
@@ -110,7 +196,17 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "första hjälpen"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ]
   },
   {
     "ID": 10,
@@ -122,7 +218,17 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "trygghetstältet"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ]
   },
   {
     "ID": 11,
@@ -134,6 +240,16 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "trygghetstältet"
-    }
+    },
+    "open_hours": [
+      {
+        "time_open": "2024-01-04T15:00:00",
+        "time_close": "2024-01-04T21:00:00"
+      },
+      {
+        "time_open": "2024-01-06T18:00:00",
+        "time_close": "2024-01-06T23:00:00"
+      }
+    ]
   }
 ]
