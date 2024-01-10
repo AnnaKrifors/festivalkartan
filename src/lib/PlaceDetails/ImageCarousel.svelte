@@ -27,7 +27,7 @@
   };
 </script>
 
-<div class="relative z-0">
+<div class="relative z-0 overflow-x-hidden">
   <div
     class="relative aspect-video overflow-hidden"
     use:swipe={{ timeframe: 300, minSwipeDistance: 100, touchAction: "pan-y" }}
@@ -45,28 +45,34 @@
   </div>
   {#if images.length > 1}
     <span
-      class="px-auto justify-content-center absolute left-0 right-0 top-2 z-10 flex gap-1"
+      class="px-auto absolute left-0 right-0 top-2 z-10 flex justify-center gap-1"
     >
       {#each images as _, listIndex}
         <span
           class={`h-3 w-3 rounded-full ${
-            listIndex === index ? "bg-[#44634B]" : "bg-white"
+            listIndex === index ? "bg-black" : "bg-white"
           }`}
         />
       {/each}
     </span>
     <button
-      class="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[#44634B] p-2 text-white"
+      class="absolute -right-0 top-1/2 z-10 h-20 w-20 -translate-y-1/2 translate-x-1/2 rounded-full bg-black p-2 text-white"
       title="Nästa bild"
       on:click={next}
     >
-      <Icon name="expand" className={`h-5 w-5 transform rotate-90`} /></button
+      <Icon
+        name="arrow"
+        className={`transform -translate-x-4 h-11 w-11 fill-white`}
+      /></button
     >
     <button
-      class="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[#44634B] p-2 text-white"
+      class="absolute top-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black p-2 text-white"
       title="Föregående bild"
       on:click={prev}
-      ><Icon name="expand" className={`h-5 w-5 transform -rotate-90`} /></button
+      ><Icon
+        name="arrow"
+        className={`transform translate-x-4 h-11 w-11 -rotate-180 fill-white`}
+      /></button
     >
   {/if}
 </div>

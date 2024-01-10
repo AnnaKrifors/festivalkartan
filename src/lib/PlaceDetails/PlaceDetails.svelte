@@ -1,9 +1,10 @@
 <script lang="ts">
   import { placeDetailsStore } from "../../data/placeDetails";
   import { currentPlace as currentPlaceStore } from "../../data/places";
-  import About from "./About.svelte";
+  import About from "./OtherInfo.svelte";
   import Header from "./Header.svelte";
   import ImageCarousel from "./ImageCarousel.svelte";
+  import ProgramButton from "./ProgramButton.svelte";
   import Video from "./Video.svelte";
 
   let loading: boolean;
@@ -17,7 +18,7 @@
   });
 </script>
 
-<div class="flex h-full flex-col">
+<div class=" bg-mintlight flex h-full flex-col">
   {#if error}
     <div class="px-10 py-20">
       <p class="text-center text-xl">
@@ -36,18 +37,31 @@
       videoOnTop={$currentPlaceStore?.videoOnTop}
     />
     <div class="p-10">
-      <p class="text-center text-xl">{@html placeDetails?.preface}</p>
+      <p class="text-xl">{@html placeDetails?.preface}</p>
     </div>
     <div
       class="w-100 flex-grow justify-between max-sm:flex max-sm:flex-col-reverse sm:px-10"
     >
       <About />
-      <div class="mb-auto">
-        <div class="mb-10 max-sm:px-10">
+      <div
+        class="bg-mobile-green-gradient flex h-52 items-center justify-center pt-14 sm:hidden"
+      >
+        {#if placeDetails.buttonDetails}
+          <ProgramButton buttonDetails={placeDetails.buttonDetails} />
+        {/if}
+      </div>
+      <div class="bg-mintlight mb-auto">
+        <div class="mb-6 max-sm:px-10">
           <p class="text-lg">{@html placeDetails?.body}</p>
         </div>
       </div>
     </div>
+    <div class="bg-lg-green-gradient h-56 pb-20 pt-32 max-sm:hidden">
+      {#if placeDetails.buttonDetails}
+        <ProgramButton buttonDetails={placeDetails.buttonDetails} />
+      {/if}
+    </div>
+
     <div class="clear-right mt-auto">
       {#if !$currentPlaceStore?.videoOnTop}
         <Video video={placeDetails.video} />

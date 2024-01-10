@@ -105,6 +105,15 @@
         fill={color || "currentColor"}
       ></path></svg
     >
+  {:else if name === "arrow"}
+    <svg
+      class={className}
+      focusable="false"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-testid="ArrowRightAltIcon"
+      ><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"></path></svg
+    >
   {:else if name === "scene" || "stage"}
     <svg
       class={className}

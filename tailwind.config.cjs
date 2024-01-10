@@ -13,6 +13,13 @@ module.exports = {
         lightgrey: "#00000029",
         darkgreen: "#216B5B",
         coralred: "#E9425C",
+        mintlight: "#E1F0E3",
+      },
+      backgroundImage: {
+        "mobile-green-gradient":
+          "linear-gradient(190deg, rgba(225,240,227,1) 35%, rgba(181,217,185,1) 35%)",
+        "lg-green-gradient":
+          "linear-gradient(190deg, rgba(225,240,227,1) 40%, rgba(181,217,185,1) 40%)",
       },
       dropShadow: {
         markerShadow: "0 0px 15px rgba(255, 255, 255, 0.93)",

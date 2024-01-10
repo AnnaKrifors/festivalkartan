@@ -11,7 +11,11 @@
       "description": "ABB Arena Nord, Västerås"
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
-    "programLink": "www.cityfestivalen.se/program"
+    "programLink": "www.google.com",
+    "buttonDetails":{
+      "buttonText": "Consid",
+      "url": "www.consid.com/sv"
+    }
   },
   {
     "ID": 2,
@@ -25,7 +29,11 @@
       "description": "Entree 1 som leder in till festivalen"
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
-    "programLink": "www.cityfestivalen.se/program"
+    "programLink": "https://www.google.com",
+    "buttonDetails":{
+      "buttonText": "Google",
+      "url": "https://www.google.com"
+    }
   },
   {
     "ID": 3,

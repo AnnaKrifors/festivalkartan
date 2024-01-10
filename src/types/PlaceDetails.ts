@@ -14,6 +14,9 @@ export type PlaceDetails = {
   image: Image;
   video?: Video;
   otherInfo?: string;
-  programLink?: string;
+  buttonDetails?: {
+    buttonText: string;
+    url: string;
+  };
   adress?: string;
 };
