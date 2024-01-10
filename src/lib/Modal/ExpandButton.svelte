@@ -7,12 +7,12 @@
 
 <button
   title={`${expanded ? "minimera" : "expandera"} modal`}
-  class="absolute left-1/2 top-0 -translate-x-1/2 rounded-full border border-slate-100 bg-white p-2"
+  class="absolute left-1/2 top-0 -translate-x-1/2 rounded-full bg-darkgreen p-2"
   on:click={onClick}
 >
   <Icon
     name="expand"
-    className={`h-8 w-8 ${
+    className={`text-white h-8 w-8 ${
       expanded ? "transform rotate-180" : ""
     } transition-transform`}
   />

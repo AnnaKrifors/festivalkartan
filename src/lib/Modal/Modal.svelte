@@ -26,7 +26,7 @@
   id="modal"
   class="absolute bottom-0 left-0 z-10 max-h-full max-w-full pt-4"
 >
-  <div class="bg-slate-50">
+  <div class="bg-mintlight rounded-lg">
     <ExpandButton
       onClick={() => {
         expanded = !expanded;

@@ -6,13 +6,13 @@
   import Filters from "./Filters.svelte";
 </script>
 
-<div class="px-2 pb-16 md:pt-4">
+<div class="px-6 pb-16 md:pt-4">
   <Filters />
   <ul>
     {#each $placesStore as place}
       {#if !place.hidden}
         <li
-          class="item max-w-100 mb-2 rounded bg-slate-200 transition duration-200 hover:brightness-90"
+          class="item max-w-100 mb-2 transition duration-200 hover:brightness-90"
         >
           <button
             class="flex w-full items-stretch text-left"
@@ -22,32 +22,26 @@
           >
             {#if place.images}
               <img
-                class="w-40 shrink-0 object-cover lg:w-60"
+                class="w-40 shrink-0 rounded-l-lg object-cover lg:w-60"
                 src={place.images[0].url || ""}
                 alt={place.images[0].alt}
               />
             {:else}
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
-            <div class="w-full overflow-hidden bg-dark-green p-4 text-beige">
-              <div class="align-center flex overflow-hidden pb-2">
-                <span
-                  class="text-md vv-font mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
-                >
-                  {place.postTitle}
-                </span>
-                <Icon name="chevron" className="transform h-6 w-6" />
-              </div>
+            <div
+              class="relative flex w-full items-center justify-between rounded-r-lg bg-white p-4 text-black"
+            >
+              <span
+                class="text-md mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
+              >
+                {place.postTitle}
+              </span>
 
-              <div class="text-md flex items-center gap-2 pb-1">
-                <Icon
-                  className="h-4 w-4 shrink-0"
-                  color="#ffe075"
-                  name={place.markerType}
-                />
-                <p class="color-yellow-400 text-sm sm:text-base md:text-lg">
-                  {MarkerType[place.markerType]}
-                </p>
+              <div
+                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1"
+              >
+                <Icon name="arrow" className="w-6 fill-white" />
               </div>
             </div>
           </button>
