@@ -26,7 +26,7 @@
   id="modal"
   class="absolute bottom-0 left-0 z-10 max-h-full max-w-full pt-4"
 >
-  <div class="bg-mintlight rounded-lg">
+  <div class="rounded-lg bg-mintlight">
     <ExpandButton
       onClick={() => {
         expanded = !expanded;
@@ -54,9 +54,9 @@
         closed
           ? "invisible max-h-0"
           : expanded
-            ? "max-h-[calc(100vh-11rem)]"
+            ? "max-h-[calc(100dvh-18rem)]"
             : "max-h-[12rem] md:max-h-[40vh]"
-      } h-[calc(100vh-5rem)] w-[40rem] max-w-full overflow-y-scroll transition-all xl:w-[48rem]`}
+      } w-[40rem] max-w-full overflow-y-scroll transition-all xl:w-[48rem]`}
     >
       {#if !$currentPlace}
         <PlaceList />

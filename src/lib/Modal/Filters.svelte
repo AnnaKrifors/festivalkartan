@@ -38,7 +38,7 @@
 >
   {#each filters as filter}
     <label
-      class="relative flex cursor-pointer items-center gap-2 overflow-hidden rounded-lg bg-white p-2 text-sm font-semibold text-[#003E4A] transition focus-within:ring-2 focus-within:ring-[#003E4A] focus-within:ring-offset-2 focus-within:ring-offset-white hover:bg-[#F7A1A1]/30"
+      class="relative flex cursor-pointer items-center gap-1 overflow-hidden rounded-lg bg-white p-2 text-sm text-[#003E4A] transition focus-within:ring-2 focus-within:ring-[#003E4A] focus-within:ring-offset-2 focus-within:ring-offset-white hover:bg-[#F7A1A1]/30"
       for={filter}
     >
       <div class="flex h-5 w-5 items-center justify-center">

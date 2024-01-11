@@ -6,7 +6,7 @@
   import Filters from "./Filters.svelte";
 </script>
 
-<div class="px-6 pb-16 md:pt-4">
+<div class="px-4 pb-16 md:pt-4">
   <Filters />
   <ul>
     {#each $placesStore as place}
