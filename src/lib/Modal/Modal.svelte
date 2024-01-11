@@ -56,7 +56,7 @@
           : expanded
             ? "max-h-[calc(100dvh-18rem)]"
             : "max-h-[12rem] md:max-h-[40vh]"
-      } w-[40rem] max-w-full overflow-y-scroll transition-all xl:w-[48rem]`}
+      } h-screen w-[40rem] max-w-full overflow-y-scroll transition-all xl:w-[48rem]`}
     >
       {#if !$currentPlace}
         <PlaceList />
