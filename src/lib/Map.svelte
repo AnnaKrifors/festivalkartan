@@ -62,8 +62,17 @@
         ],
       }),
     );
-
+    const geolocate = new maplibregl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true,
+      },
+      trackUserLocation: true,
+    });
+    $mapStore.addControl(geolocate);
     $mapStore.addControl(new maplibregl.NavigationControl({}), "top-right");
+    $mapStore.on("load", function () {
+      geolocate.trigger();
+    });
   }
 
   onMount(() => {
