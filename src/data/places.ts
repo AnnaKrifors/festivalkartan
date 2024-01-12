@@ -14,7 +14,7 @@ const fetchPlaces = async () => {
 
 /**
  * filters `placesStore`
- *  by the given facility names
+ *  by the given markerType names
  */
 export const filterStore: Writable<string[]> = writable([]);
 
