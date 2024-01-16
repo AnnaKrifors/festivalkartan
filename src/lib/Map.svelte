@@ -77,17 +77,7 @@
 
   onMount(() => {
     createMap();
-    createAnimatedMarker(
-      $mapStore,
-      [16.491123, 59.609104],
-      [16.654628, 59.611901],
-      "https://visitvasteras.se/app/themes/visit-vasteras/dist/aircraft.png",
-      15,
-      0.786407767,
-      10000,
-      13,
-      "loop",
-    );
+
     createAnimatedMarker(
       $mapStore,
       [16.555924415587867, 59.60907242440322],
