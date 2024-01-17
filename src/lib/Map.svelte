@@ -14,9 +14,9 @@
 
   function createMap(): void {
     const initialState = {
-      lng: 16.543410733610866,
-      lat: 59.609272888491546,
-      zoom: 13.6,
+      lng: 16.54644683494181,
+      lat: 59.608400285145265,
+      zoom: 14,
     };
 
     mapStore.set(
@@ -55,10 +55,11 @@
         center: [initialState.lng, initialState.lat],
         zoom: initialState.zoom,
         maxZoom: 16,
+        minZoom: 13,
         dragRotate: false,
         maxBounds: [
-          [8.796119862499996, 54.88547940635037],
-          [24.960857238505348, 69.4312245246523],
+          [16.471318098036782, 59.58591871958956],
+          [16.619577204640287, 59.63565020308816],
         ],
       }),
     );
@@ -70,9 +71,6 @@
     });
     $mapStore.addControl(geolocate);
     $mapStore.addControl(new maplibregl.NavigationControl({}), "top-right");
-    $mapStore.on("load", function () {
-      geolocate.trigger();
-    });
   }
 
   onMount(() => {
