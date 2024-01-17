@@ -6,7 +6,7 @@
   import { placesStore } from "../data/places";
   import { addMarkers } from "../utils/marker";
   import { createAnimatedMarker } from "./AnimatedMarker.svelte";
-
+  import { setCurrentPlace } from "../utils/marker";
   let mapContainer: HTMLElement;
 
   $: addMarkers($placesStore);
@@ -69,8 +69,16 @@
       },
       trackUserLocation: true,
     });
+
     $mapStore.addControl(geolocate);
     $mapStore.addControl(new maplibregl.NavigationControl({}), "top-right");
+    $mapStore.on("load", function () {
+      $placesStore.forEach((place) => {
+        if (window.location.href.includes(encodeURI(`${place.postTitle}`))) {
+          return setCurrentPlace(place);
+        }
+      });
+    });
   }
 
   onMount(() => {

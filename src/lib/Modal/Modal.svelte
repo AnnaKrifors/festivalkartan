@@ -1,11 +1,11 @@
 <script lang="ts">
   import { currentPlace } from "../../data/places";
-  import { unsetCurrentPlace } from "../../utils/marker";
   import PlaceDetails from "../PlaceDetails/PlaceDetails.svelte";
   import BackButton from "./BackButton.svelte";
   import CloseButton from "./CloseButton.svelte";
   import ExpandButton from "./ExpandButton.svelte";
   import PlaceList from "./PlaceList.svelte";
+  import { handleBackClick } from "../../utils/url";
 
   let expanded = false;
   let closed = false;
@@ -37,13 +37,17 @@
       {expanded}
     />
     <div class={`flex justify-between px-2 pt-2 ${closed ? "invisible" : ""}`}>
-      <BackButton />
+      <BackButton
+        onClick={() => {
+          handleBackClick();
+        }}
+      />
       <CloseButton
         onClick={() => {
           closed = !closed;
           if (closed) {
             expanded = false;
-            unsetCurrentPlace();
+            handleBackClick();
           }
         }}
       />

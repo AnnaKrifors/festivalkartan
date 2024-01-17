@@ -1,9 +1,9 @@
 <script lang="ts">
   import { placesStore } from "../../data/places";
-  import { MarkerType } from "../../types/Place";
   import { setCurrentPlace } from "../../utils/marker";
   import Icon from "../Icon.svelte";
   import Filters from "./Filters.svelte";
+  import { handlePlaceClick } from "../../utils/url";
 </script>
 
 <div class="px-4 pb-16 md:pt-4">
@@ -18,6 +18,7 @@
             class="flex w-full items-stretch text-left"
             on:click={() => {
               setCurrentPlace(place);
+              handlePlaceClick(place);
             }}
           >
             {#if place.images}

@@ -3,6 +3,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { mapStore } from "../data/map";
 import { currentPlace } from "../data/places";
 import { MarkerType, type Place } from "../types/Place";
+import { handlePlaceClick } from "./url";
 import {
   entranceMarker,
   funfairMarker,
@@ -68,6 +69,7 @@ export function addMarkers(places: Place[]) {
     let markerEl = marker.getElement();
     markerEl.addEventListener("click", () => {
       setCurrentPlace(place);
+      handlePlaceClick(place);
     });
     markers.push(marker);
   }
