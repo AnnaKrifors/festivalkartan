@@ -111,7 +111,7 @@ function getMapOffset() {
   const modal = document.getElementById("modal")?.getClientRects()[0];
   const root = document.getElementById("main")?.getClientRects()[0];
   if (!modal || !root) return { bottom: 0, top: 0, right: 0, left: 0 };
-  const modalHeight = root.height * 0.6;
+  const modalHeight = root.height * 0.85;
   return modal.width === root.width
     ? { bottom: modalHeight, top: 30, right: 30, left: 30 }
     : { left: modal.width, top: 40, right: 40, bottom: 40 };
