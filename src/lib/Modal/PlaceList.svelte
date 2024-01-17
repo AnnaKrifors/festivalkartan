@@ -6,7 +6,7 @@
   import { handlePlaceClick } from "../../utils/url";
 </script>
 
-<div class="px-4 pb-16 md:pt-4">
+<div class="px-4 pb-16 md:px-8 md:pt-4">
   <Filters />
   <ul>
     {#each $placesStore as place}
