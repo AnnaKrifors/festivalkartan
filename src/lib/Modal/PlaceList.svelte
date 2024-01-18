@@ -40,7 +40,7 @@
               </span>
 
               <div
-                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1"
+                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1 lg:hover:bg-[#267868]"
               >
                 <Icon name="arrow" className="w-6 fill-white" />
               </div>
