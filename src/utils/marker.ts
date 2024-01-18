@@ -145,7 +145,7 @@ export function setCurrentPlace(place: Place) {
   map.flyTo({
     center: [place.coordinates.longitude, place.coordinates.latitude],
     padding: getMapOffset(),
-    zoom: 16,
+    zoom: 14,
   });
 }
 function zoomMarkerBounds() {
