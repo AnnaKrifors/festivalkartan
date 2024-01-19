@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Visit VG";
-  src:
-    local("Visit VG"),
-    local("vg5000"),
-    url("/VG5000-Regular.woff") format("woff");
-}
-
-@font-face {
   font-family: "Roboto";
   src:
     local("Roboto"),
@@ -49,11 +41,7 @@
 }
 
 h1 {
-  font-family:
-    Visit VG,
-    Roboto,
-    Arial,
-    Sans-Serif;
+  font-family: Roboto, Arial, Sans-Serif;
   font-size: 50px;
   font-weight: 400;
   line-height: 60px;
@@ -119,10 +107,6 @@ div.mapboxgl-popup-content,
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
 .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
   display: none;
-}
-
-.vv-font {
-  font-family: Visit VG;
 }
 
 .marker-label {
