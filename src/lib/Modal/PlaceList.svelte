@@ -34,7 +34,7 @@
               class="relative flex w-full items-center justify-between rounded-r-lg bg-white p-4 text-black"
             >
               <span
-                class="text-md mr-auto overflow-hidden text-ellipsis whitespace-nowrap break-all sm:text-xl md:text-2xl"
+                class="text-md mr-auto hyphens-auto break-words sm:text-xl md:text-2xl"
               >
                 {place.postTitle}
               </span>

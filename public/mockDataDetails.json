@@ -12,7 +12,7 @@
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
     "programLink": "www.google.com",
-    "buttonDetails":{
+    "buttonDetails": {
       "buttonText": "Consid",
       "url": "www.consid.com/sv"
     }
@@ -30,7 +30,7 @@
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
     "programLink": "https://www.google.com",
-    "buttonDetails":{
+    "buttonDetails": {
       "buttonText": "Google",
       "url": "https://www.google.com"
     }
@@ -143,6 +143,19 @@
   {
     "ID": 11,
     "preface": "Största scenen på hela festivalen",
+    "body": "Stor scen för dig som behöver det!",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "trygghetstältet"
+    },
+    "otherInfo": "Här kan man skriva in annan information så som öppettider, ålderårsgräns osv"
+  },
+  {
+    "ID": 12,
+    "preface": "den plats som ska ha den längsta titlen på hela festivalen...",
     "body": "Stor scen för dig som behöver det!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
     "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",

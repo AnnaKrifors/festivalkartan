@@ -169,10 +169,30 @@
   },
   {
     "ID": 11,
-    "postTitle": "storascenen",
+    "postTitle": "mimerscenen hallstahammar",
     "coordinates": {
       "latitude": 59.60931445220342,
       "longitude": 16.545010542442355
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Vasteras_ABB-Nord_Pressbild.jpg",
+        "alt": "Isbanan i Abb Arena Nord. Pressbild."
+      },
+      {
+        "url": "https://visitvasteras.se/app/uploads/2023/01/Vasteras_CVB_Rocklunda-Evenemangsomrade_Lennart-Hyse_001.jpg",
+        "alt": "Drönarvy över Rocklunda, Sveriges största sammanhållna idrottsområde. Foto: Lennart Hyse."
+      }
+    ],
+    "videoOnTop": false,
+    "markerType": "scene"
+  },
+  {
+    "ID": 12,
+    "postTitle": "längstatitelnihelastad",
+    "coordinates": {
+      "latitude": 59.609359706513445,
+      "longitude": 16.543271255699622
     },
     "images": [
       {
