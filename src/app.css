@@ -104,6 +104,21 @@ div.mapboxgl-popup-content,
   font-weight: Bold;
 }
 
+.maplibregl-ctrl:first-child .maplibregl-ctrl-geolocate:before {
+  content: "Min position";
+  font-size: 0.875rem;
+}
+.maplibregl-ctrl:first-child .maplibregl-ctrl-geolocate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5em;
+  width: unset;
+}
+.mapboxgl-ctrl:first-child .mapboxgl-ctrl-icon {
+  width: 29px;
+}
+
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
 .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
   display: none;
