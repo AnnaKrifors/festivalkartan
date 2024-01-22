@@ -79,6 +79,17 @@
         }
       });
     });
+    geolocate.on("outofmaxbounds", function () {
+      alert(
+        "Du behöver befinna dig nära västerås stad för att se din position.",
+      );
+      !geolocate.trigger();
+    });
+    geolocate.on("error", function () {
+      alert(
+        "Det går inte att hitta din position just nu. Se till att appen har tillåtelse att se din position.",
+      );
+    });
   }
 
   onMount(() => {
