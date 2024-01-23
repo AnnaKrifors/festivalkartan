@@ -50,15 +50,4 @@
       {/if}
     {/each}
   </ul>
-  <div class="flex items-center gap-3">
-    <img
-      src="https://visitvasteras.se/app/themes/visit-vasteras/dist/EUlogo.jpg"
-      alt="EU logo"
-      class="w-32"
-    />
-    <p class="m max-w-[40ch]">
-      Västerås mötes- och evenemangskarta är framtagen med hjälp av
-      EU-finansiering.
-    </p>
-  </div>
 </div>
