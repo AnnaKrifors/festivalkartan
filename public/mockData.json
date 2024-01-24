@@ -206,5 +206,21 @@
     ],
     "videoOnTop": false,
     "markerType": "scene"
+  },
+  {
+    "ID": 13,
+    "postTitle": "Pride start",
+    "coordinates": {
+      "latitude": 59.6135940607868,
+      "longitude": 16.536986043205424
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "markerType": "prideparade"
   }
 ]

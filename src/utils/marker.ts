@@ -17,6 +17,7 @@ import {
   waterMarker,
   wristBandMarker,
   markerLabel,
+  prideParadeMarker,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -105,6 +106,9 @@ export function getMarkerByType(currMarker: MarkerType) {
   }
   if (currMarker === "safetytent") {
     return safetytentMarker();
+  }
+  if (currMarker === "prideparade") {
+    return prideParadeMarker();
   }
   return defaultMarker();
 }

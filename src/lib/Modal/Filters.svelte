@@ -15,7 +15,7 @@
     }
     filters = Array.from(uniqueMarkerTypes).filter(
       (filter) =>
-        !["safetytent", "market", "entrance_fee"].find(
+        !["safetytent", "market", "entrance_fee", "prideparade"].find(
           (item) => filter === item,
         ),
     );
@@ -25,9 +25,15 @@
     filterStore.update((filters) => {
       const target = event.target as HTMLInputElement;
       if (target.checked) {
-        return [...filters, target.value];
+        return target.value === "pride"
+          ? [...filters, target.value, "prideparade"]
+          : [...filters, target.value];
       }
-      return filters.filter((filter) => filter !== target.value);
+      return target.value === "pride"
+        ? filters.filter(
+            (filter) => filter !== "pride" && filter !== "prideparade",
+          )
+        : filters.filter((filter) => filter !== target.value);
     });
   };
 </script>

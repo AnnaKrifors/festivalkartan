@@ -11,7 +11,6 @@
       "description": "ABB Arena Nord, Västerås"
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
-    "programLink": "www.google.com",
     "buttonDetails": {
       "buttonText": "Consid",
       "url": "www.consid.com/sv"
@@ -29,7 +28,6 @@
       "description": "Entree 1 som leder in till festivalen"
     },
     "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
-    "programLink": "https://www.google.com",
     "buttonDetails": {
       "buttonText": "Google",
       "url": "https://www.google.com"
@@ -59,8 +57,7 @@
       "type": "iframe",
       "description": "en flyttbar toalett som smidigt kan användas"
     },
-    "otherInfo": "Här kan man skriva in annan information så som öppettider, ålderårsgräns osv",
-    "programLink": "Här läggs länken till programmet för knappen i detaljsidan"
+    "otherInfo": "Här kan man skriva in annan information så som öppettider, ålderårsgräns osv"
   },
   {
     "ID": 5,
@@ -163,6 +160,19 @@
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
       "description": "trygghetstältet"
+    },
+    "otherInfo": "Här kan man skriva in annan information så som öppettider, ålderårsgräns osv"
+  },
+  {
+    "ID": 13,
+    "preface": "Pridetåg - Start",
+    "body": "Här startar pride-tåget!",
+    "location": "Belägen till vänster om turbinhuset vid svartån",
+    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
+    "video": {
+      "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
+      "type": "iframe",
+      "description": "Här startar pridetåget"
     },
     "otherInfo": "Här kan man skriva in annan information så som öppettider, ålderårsgräns osv"
   }
