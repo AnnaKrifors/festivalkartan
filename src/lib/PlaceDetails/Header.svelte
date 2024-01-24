@@ -14,7 +14,7 @@
   <h1
     class={`z-10 rounded-r-lg text-xl tracking-wide text-white md:text-4xl ${
       (images?.length > 0 || videoOnTop) && "absolute"
-    } bg-coralred bottom-0 translate-y-1/2 px-10 py-2`}
+    } bottom-0 translate-y-1/2 bg-coralred px-10 py-2 uppercase`}
   >
     {title}
   </h1>
