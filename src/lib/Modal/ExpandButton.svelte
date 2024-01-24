@@ -7,7 +7,7 @@
 
 <button
   title={`${expanded ? "minimera" : "expandera"} modal`}
-  class="absolute left-1/2 top-0 -translate-x-1/2 rounded-full bg-darkgreen p-2 lg:hover:bg-[#267868]"
+  class="bg-darkgreen absolute left-1/2 top-0 -translate-x-1/2 rounded-full p-2 lg:hover:bg-black"
   on:click={onClick}
 >
   <Icon

@@ -31,7 +31,7 @@
               <div class="w-40 shrink-0 bg-slate-300 lg:w-60" />
             {/if}
             <div
-              class="relative flex w-full items-center justify-between rounded-r-lg bg-white p-4 text-black"
+              class="group relative flex w-full items-center justify-between rounded-r-lg bg-white p-4 text-black"
             >
               <span
                 class="text-md mr-auto hyphens-auto break-words sm:text-xl md:text-2xl"
@@ -40,7 +40,7 @@
               </span>
 
               <div
-                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1 lg:hover:bg-[#267868]"
+                class="bg-darkgreen absolute right-0 translate-x-1/2 rounded-full md:p-1 lg:group-hover:bg-black"
               >
                 <Icon name="arrow" className="w-6 fill-white" />
               </div>
