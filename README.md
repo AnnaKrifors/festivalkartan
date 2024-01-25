@@ -19,6 +19,7 @@ pnpm dev
 - [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss).
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
 ## Deployment
 
