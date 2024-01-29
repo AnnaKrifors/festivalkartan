@@ -39,7 +39,7 @@
 </script>
 
 <fieldset
-  class="mb-5 grid grid-cols-2 justify-start gap-3 xl:grid-cols-4"
+  class="mb-5 mt-2 grid grid-cols-2 justify-start gap-3 xl:grid-cols-4"
   aria-label="filter"
 >
   {#each filters as filter}
