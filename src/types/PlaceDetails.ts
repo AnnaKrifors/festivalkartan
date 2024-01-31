@@ -1,5 +1,3 @@
-import type { Image } from "./Image";
-
 export type Video = {
   source: string;
   description: string;
@@ -11,7 +9,6 @@ export type PlaceDetails = {
   preface: string;
   body: string;
   location: string;
-  image: Image;
   video?: Video;
   otherInfo?: string;
   buttonDetails?: {

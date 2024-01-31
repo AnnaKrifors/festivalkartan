@@ -2,9 +2,8 @@
   {
     "ID": 1,
     "preface": "En stor scen som ligger på Fiskartorget i Västerås",
-    "body": "Gäster påMimerscnenen Etage har hela stadens utbud utanför dörren. Härifrån är det nära till allt, konferensanläggningar, restauranger och shopping. Hotellet har 93 trevliga rum till vilka gästerna serveras frukost, afternoon sweets och middag där allt ingår i rumspriset.",
+    "body": "Gäster på Mimerscnenen Etage har hela stadens utbud utanför dörren. Härifrån är det nära till allt, konferensanläggningar, restauranger och shopping. Hotellet har 93 trevliga rum till vilka gästerna serveras frukost, afternoon sweets och middag där allt ingår i rumspriset.",
     "location": "string",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -21,7 +20,6 @@
     "preface": "Entree som leder dig direkt in på festivalområdet",
     "body": "Här måste du ha ett giltigt festivalarmband för att komma in",
     "location": "string",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -38,7 +36,6 @@
     "preface": "En av våra toaletter som finns utsatta på festivalområdet",
     "body": "I alla våra toaletter finns toalettpapper, handsprit samt andra hygienartiklar",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -51,7 +48,6 @@
     "preface": "Pridetält där du kan få information om allt spännande som händer kring pride",
     "body": "Föreningens syfte att synliggöra hbtq+-frågor och skapa en frizon för homosexuella, bisexuella, trans och queerpersoner och de könsuttryck som finns inom hbtq+-rörelsen. Årligen arrangeras festivalen Stockholm Pride som sedan 1998 är Nordens största Pridefestival.",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -64,7 +60,6 @@
     "preface": "Dricksvatten",
     "body": "Färskt dricksvatten",
     "location": "vid kranen",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -77,7 +72,6 @@
     "preface": "Byt till festivalarmband här!",
     "body": "Byt ditt festivalarmband förklaring..",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -90,7 +84,6 @@
     "preface": "Nöjesfält som ger dig glädje!",
     "body": "Nöjesfält med fart och fläkt.",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -103,7 +96,6 @@
     "preface": "Marknad där man kan köpa mat osv",
     "body": "Stor blandning av mat och dryck",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -116,7 +108,6 @@
     "preface": "Första hjälpen finns här!",
     "body": "Första hjälpen finns här vid behov.",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -129,7 +120,6 @@
     "preface": "Trygghetstältet för dig som blivit utsatt",
     "body": "Trygghetstältet för dig som behöver det!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -142,7 +132,6 @@
     "preface": "Största scenen på hela festivalen",
     "body": "Stor scen för dig som behöver det!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -155,7 +144,6 @@
     "preface": "den plats som ska ha den längsta titlen på hela festivalen...",
     "body": "Stor scen för dig som behöver det!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
@@ -168,7 +156,6 @@
     "preface": "Pridetåg - Start",
     "body": "Här startar pride-tåget!",
     "location": "Belägen till vänster om turbinhuset vid svartån",
-    "image": "https://nordicchoicehotels.se/hotell/sverige/vasteras/comfort-hotel-vasteras",
     "video": {
       "source": "https://www.youtube.com/embed/jHLMVt6bVGE?feature=oembed",
       "type": "iframe",
