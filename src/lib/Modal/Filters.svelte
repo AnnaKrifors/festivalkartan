@@ -44,7 +44,7 @@
 >
   {#each filters as filter}
     <label
-      class="group relative flex cursor-pointer flex-col items-center gap-1 overflow-hidden text-sm text-[#003E4A]
+      class="group relative flex cursor-pointer flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]
      "
       for={filter}
     >

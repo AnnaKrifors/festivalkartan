@@ -36,7 +36,11 @@
       }}
       {expanded}
     />
-    <div class={`flex justify-between px-2 pt-2 ${closed ? "invisible" : ""}`}>
+    <div
+      class={`flex items-center justify-between px-2 ${
+        closed ? "invisible" : ""
+      }`}
+    >
       <BackButton
         onClick={() => {
           handleBackClick();

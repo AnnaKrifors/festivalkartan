@@ -6,7 +6,7 @@
   import { handlePlaceClick } from "../../utils/url";
 </script>
 
-<div class="px-4 pb-16 md:px-8 md:pt-4">
+<div class="px-4 pb-16 md:px-8">
   <Filters />
   <ul>
     {#each $placesStore as place}
@@ -41,7 +41,7 @@
               </span>
 
               <div
-                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1 lg:group-hover:bg-black"
+                class="bg-darkgreen absolute right-0 translate-x-1/2 rounded-full md:p-1 lg:group-hover:bg-black"
               >
                 <Icon name="arrow" className="w-6 fill-white" />
               </div>
