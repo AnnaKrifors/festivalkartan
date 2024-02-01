@@ -14,6 +14,7 @@ module.exports = {
         darkgreen: "#216B5B",
         coralred: "#E9425C",
         mintlight: "#E1F0E3",
+        modalgrey: "#F4F3F1",
       },
       backgroundImage: {
         "mobile-green-gradient":

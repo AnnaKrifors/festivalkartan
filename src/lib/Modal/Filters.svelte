@@ -39,49 +39,46 @@
 </script>
 
 <fieldset
-  class="mb-5 mt-2 grid grid-cols-2 justify-start gap-3 xl:grid-cols-4"
+  class="mb-5 mt-2 grid grid-cols-4 justify-start gap-3"
   aria-label="filter"
 >
   {#each filters as filter}
     <label
-      class="relative flex cursor-pointer items-center gap-1 overflow-hidden rounded-lg bg-white p-2 text-sm text-[#003E4A] transition focus-within:ring-2 focus-within:ring-[#003E4A] focus-within:ring-offset-2 focus-within:ring-offset-white lg:hover:bg-[#F7A1A1]/30"
+      class="group relative flex cursor-pointer flex-col items-center gap-1 overflow-hidden text-sm text-[#003E4A]
+     "
       for={filter}
     >
-      <div class="flex h-5 w-5 items-center justify-center">
+      <div
+        class="flex h-14 w-14
+        items-center justify-center rounded-full bg-white p-2
+        transition group-focus-within:ring-2 group-focus-within:ring-[#003E4A] group-focus-within:ring-offset-2 group-focus-within:ring-offset-white
+       lg:h-16 lg:w-16
+         lg:hover:bg-[#F7A1A1]/30
+        {$filterStore.includes(filter) ? 'checked' : ''}"
+      >
         {@html getIconByType(filter)}
       </div>
 
-      <span class="grow">
+      <span class="grow overflow-auto break-all text-center">
         {MarkerType[filter]}
       </span>
       <input
         id={filter}
-        class="peer absolute ml-auto appearance-none p-1"
+        class="absolute ml-auto appearance-none p-1 outline-none"
         type="checkbox"
         value={filter}
         checked={$filterStore.includes(filter)}
         on:change={handleFilterChange}
       />
-      <span class="invisible h-4 w-5 flex-none peer-checked:visible">
-        <svg
-          preserveAspectRatio="xMinYMin meet"
-          viewBox="0 0 16 11"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-100 h-100"
-        >
-          <path
-            d="M5.81278 10.2363L0.567383 5.4962L1.87873 4.31117L5.81278 7.86627L14.256 0.236328L15.5674 1.42136L5.81278 10.2363Z"
-            fill="currentColor"
-          />
-        </svg>
-      </span>
     </label>
   {/each}
 </fieldset>
 
 <style>
-  label:has(input:checked) {
+  .checked {
     background-color: #f7a1a1 !important;
+  }
+  label {
+    -webkit-tap-highlight-color: transparent;
   }
 </style>
