@@ -135,3 +135,11 @@ div.mapboxgl-popup-content,
 .map-marker:hover > .marker-label {
   display: block;
 }
+
+.marker-icon-style {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+}

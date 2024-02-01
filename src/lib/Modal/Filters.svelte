@@ -1,7 +1,7 @@
 <script lang="ts">
   import { filterStore, placesStore } from "../../data/places";
   import { MarkerType } from "../../types/Place";
-  import { getMarkerByType } from "../../utils/marker";
+  import { getIconByType } from "../../utils/marker";
 
   let filters: MarkerType[] = [];
 
@@ -48,7 +48,7 @@
       for={filter}
     >
       <div class="flex h-5 w-5 items-center justify-center">
-        {@html getMarkerByType(filter)}
+        {@html getIconByType(filter)}
       </div>
 
       <span class="grow">

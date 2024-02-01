@@ -5,19 +5,19 @@ import { currentPlace } from "../data/places";
 import { MarkerType, type Place } from "../types/Place";
 import { handlePlaceClick } from "./url";
 import {
-  entranceMarker,
-  funfairMarker,
+  entranceIcon,
+  funfairIcon,
   defaultMarker,
-  marketMarker,
-  prideMarker,
-  redcrossMarker,
-  safetytentMarker,
-  sceneAreasMarker,
-  toiletMarker,
-  waterMarker,
-  wristBandMarker,
+  marketIcon,
+  prideIcon,
+  redcrossIcon,
+  safetytentIcon,
+  sceneAreasIcon,
+  toiletIcon,
+  waterIcon,
+  wristBandIcon,
   markerLabel,
-  prideParadeMarker,
+  prideParadeIcon,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -34,13 +34,16 @@ currentPlace.subscribe((value) => {
 const markerStyle = {
   width: "35px",
   height: "35px",
+  marginTop: "-17px",
 };
 
 const selectedMarkerStyle = {
+  height: "40px",
   zIndex: 3,
 };
 
 const deselectedMarkerStyle = {
+  height: "35px",
   zIndex: 1,
 };
 
@@ -51,18 +54,20 @@ export function addMarkers(places: Place[]) {
   for (const place of unhiddenPlaces) {
     if (!place.coordinates) continue;
     const el = document.createElement("div");
+    el.innerHTML += defaultMarker();
+    el.innerHTML += getIconByType(place.markerType);
+
     el.id = place.ID.toString();
     el.className =
-      "map-marker hover:drop-shadow-markerShadow bg-slate-50 rounded-full flex justify-center items-center";
+      "map-marker hover:drop-shadow-markerShadow flex justify-center items-center";
     el.innerHTML += markerLabel(MarkerType[place.markerType]);
-    el.innerHTML += getMarkerByType(place.markerType);
 
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
       el.closest(".map-marker").style[key] = markerStyle[key];
     });
-
+    el.querySelector(".marker-icon")?.classList.add("marker-icon-style");
     let marker = new maplibregl.Marker(el)
       .setLngLat([place.coordinates.longitude, place.coordinates.latitude])
       .addTo(map);
@@ -76,39 +81,39 @@ export function addMarkers(places: Place[]) {
   }
 }
 
-export function getMarkerByType(currMarker: MarkerType) {
+export function getIconByType(currMarker: MarkerType) {
   if (currMarker === "pride") {
-    return prideMarker();
+    return prideIcon();
   }
   if (currMarker === "scene") {
-    return sceneAreasMarker();
+    return sceneAreasIcon();
   }
   if (currMarker === "wristband") {
-    return wristBandMarker();
+    return wristBandIcon();
   }
   if (currMarker === "toilet") {
-    return toiletMarker();
+    return toiletIcon();
   }
   if (currMarker === "entrance") {
-    return entranceMarker();
+    return entranceIcon();
   }
   if (currMarker === "drinkWater") {
-    return waterMarker();
+    return waterIcon();
   }
   if (currMarker === "redCross") {
-    return redcrossMarker();
+    return redcrossIcon();
   }
   if (currMarker === "market") {
-    return marketMarker();
+    return marketIcon();
   }
   if (currMarker === "funfair") {
-    return funfairMarker();
+    return funfairIcon();
   }
   if (currMarker === "safetytent") {
-    return safetytentMarker();
+    return safetytentIcon();
   }
   if (currMarker === "prideparade") {
-    return prideParadeMarker();
+    return prideParadeIcon();
   }
   return defaultMarker();
 }
@@ -117,7 +122,7 @@ function getMapOffset() {
   const modal = document.getElementById("modal")?.getClientRects()[0];
   const root = document.getElementById("main")?.getClientRects()[0];
   if (!modal || !root) return { bottom: 0, top: 0, right: 0, left: 0 };
-  const modalHeight = root.height * 0.85;
+  const modalHeight = root.height * 0.83;
   return modal.width === root.width
     ? { bottom: modalHeight, top: 30, right: 30, left: 30 }
     : { left: modal.width, top: 40, right: 40, bottom: 40 };
@@ -135,15 +140,13 @@ export function setCurrentPlace(place: Place) {
   const currEl = document.getElementById(current.ID.toString());
 
   if (currEl !== null && currEl !== undefined) {
-    ["outline", "outline-2", "outline-black", "drop-shadow-markerShadow"].map(
-      (style) => currEl.classList.add(style),
-    );
-
+    currEl.classList.add("drop-shadow-markerShadow");
     Object.keys(selectedMarkerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
       currEl.closest(".map-marker").style[key] = selectedMarkerStyle[key];
     });
+    currEl.querySelector(".main-marker")?.setAttribute("fill", "#E9425C");
   }
 
   map.flyTo({
@@ -163,15 +166,14 @@ export function unsetCurrentPlace() {
   const currEl = document.getElementById(current.ID.toString());
 
   if (currEl !== null && currEl !== undefined) {
-    ["outline", "outline-2", "outline-black", "drop-shadow-markerShadow"].map(
-      (style) => currEl.classList.remove(style),
-    );
+    currEl.classList.remove("drop-shadow-markerShadow");
 
     Object.keys(deselectedMarkerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
       // and I won't waste my time on doing it properly
       currEl.closest(".map-marker").style[key] = deselectedMarkerStyle[key];
     });
+    currEl.querySelector(".main-marker")?.setAttribute("fill", "#F4F3F1");
   }
 
   currentPlace.set(null);
