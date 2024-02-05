@@ -18,6 +18,7 @@ import {
   wristBandIcon,
   markerLabel,
   prideParadeIcon,
+  foodCourtIcon,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -114,6 +115,9 @@ export function getIconByType(currMarker: MarkerType) {
   }
   if (currMarker === "prideparade") {
     return prideParadeIcon();
+  }
+  if (currMarker === "foodcourt") {
+    return foodCourtIcon();
   }
   return defaultMarker();
 }

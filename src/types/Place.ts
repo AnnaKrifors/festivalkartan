@@ -12,6 +12,7 @@ export const MarkerType = {
   drinkWater: "Dricksvatten",
   redCross: "Röda Korset",
   prideparade: "Pridetåget",
+  foodcourt: "Mattorg",
 } as const;
 
 export type MarkerType = keyof typeof MarkerType;

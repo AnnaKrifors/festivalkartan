@@ -8,7 +8,6 @@ export type PlaceDetails = {
   ID: number;
   preface: string;
   body: string;
-  location: string;
   video?: Video;
   otherInfo?: string;
   buttonDetails?: {

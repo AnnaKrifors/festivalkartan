@@ -222,5 +222,21 @@
     ],
     "videoOnTop": false,
     "markerType": "prideparade"
+  },
+  {
+    "ID": 14,
+    "postTitle": "Mat, massor med mat!",
+    "coordinates": {
+      "latitude": 59.609777341291824,
+      "longitude": 16.546420531153363
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "markerType": "foodcourt"
   }
 ]
