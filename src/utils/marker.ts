@@ -60,7 +60,7 @@ export function addMarkers(places: Place[]) {
     el.id = place.ID.toString();
     el.className =
       "map-marker hover:drop-shadow-markerShadow flex justify-center items-center";
-    el.innerHTML += markerLabel(MarkerType[place.markerType]);
+    el.innerHTML += markerLabel(place.postTitle);
 
     Object.keys(markerStyle).forEach((key) => {
       // @ts-ignore - TS doesn't like this, but it works,
@@ -122,7 +122,7 @@ function getMapOffset() {
   const modal = document.getElementById("modal")?.getClientRects()[0];
   const root = document.getElementById("main")?.getClientRects()[0];
   if (!modal || !root) return { bottom: 0, top: 0, right: 0, left: 0 };
-  const modalHeight = root.height * 0.83;
+  const modalHeight = root.height * 0.77;
   return modal.width === root.width
     ? { bottom: modalHeight, top: 30, right: 30, left: 30 }
     : { left: modal.width, top: 40, right: 40, bottom: 40 };
