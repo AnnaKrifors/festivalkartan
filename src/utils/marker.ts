@@ -32,18 +32,18 @@ currentPlace.subscribe((value) => {
 });
 
 const markerStyle = {
-  width: "35px",
-  height: "35px",
+  height: "40px",
+  width: "24px",
   marginTop: "-17px",
 };
 
 const selectedMarkerStyle = {
-  height: "40px",
+  width: "36px",
   zIndex: 3,
 };
 
 const deselectedMarkerStyle = {
-  height: "35px",
+  width: "24px",
   zIndex: 1,
 };
 

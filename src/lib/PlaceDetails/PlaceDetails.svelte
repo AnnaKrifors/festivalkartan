@@ -40,7 +40,7 @@
       <p class="text-xl">{@html placeDetails?.preface}</p>
     </div>
     <div
-      class="w-100 flex-grow justify-between max-sm:flex max-sm:flex-col-reverse sm:px-10"
+      class="w-100 bg-mintlight flex-grow justify-between max-sm:flex max-sm:flex-col-reverse sm:px-10"
     >
       <About />
       <div
