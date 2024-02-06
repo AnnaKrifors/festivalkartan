@@ -13,19 +13,8 @@
     for (const place of places) {
       uniqueMarkerTypes.add(place.markerType);
     }
-    filters = Array.from(uniqueMarkerTypes).filter(
-      (filter) =>
-        ![
-          "market",
-          "entrance",
-          "pride",
-          "safetytent",
-          "wristband",
-          "drinkWater",
-          "redCross",
-          "prideparade",
-          "foodcourt",
-        ].find((item) => filter === item),
+    filters = Array.from(uniqueMarkerTypes).filter((filter) =>
+      ["scene", "toilet", "funfair"].find((item) => filter === item),
     );
   });
   const handleFilterChange = (event: Event) => {
