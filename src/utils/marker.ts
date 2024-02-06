@@ -19,6 +19,7 @@ import {
   markerLabel,
   prideParadeIcon,
   foodCourtIcon,
+  miscMarkerIcon,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -119,7 +120,7 @@ export function getIconByType(currMarker: MarkerType) {
   if (currMarker === "foodcourt") {
     return foodCourtIcon();
   }
-  return defaultMarker();
+  return miscMarkerIcon();
 }
 
 function getMapOffset() {

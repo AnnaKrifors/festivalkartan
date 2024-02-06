@@ -238,5 +238,21 @@
     ],
     "videoOnTop": false,
     "markerType": "foodcourt"
+  },
+  {
+    "ID": 15,
+    "postTitle": "Något annat",
+    "coordinates": {
+      "latitude": 59.6062310638926,
+      "longitude": 16.546979956942586
+    },
+    "images": [
+      {
+        "url": "https://visitvasteras.se/app/uploads/2022/12/Stuga-2-scaled.jpg",
+        "alt": ""
+      }
+    ],
+    "videoOnTop": false,
+    "markerType": ""
   }
 ]
