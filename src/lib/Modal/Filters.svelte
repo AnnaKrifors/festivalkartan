@@ -37,13 +37,13 @@
   aria-label="filter"
 >
   {#each filters as filter}
-    <label
-      class="group relative flex cursor-pointer flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]
+    <div
+      class="group relative flex flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]
      "
-      for={filter}
     >
-      <div
-        class="flex h-14 w-14
+      <label
+        for={filter}
+        class="flex h-14 w-14 cursor-pointer
         items-center justify-center rounded-full bg-white p-2
         transition group-focus-within:ring-2 group-focus-within:ring-[#003E4A] group-focus-within:ring-offset-2 group-focus-within:ring-offset-white
        lg:h-16 lg:w-16
@@ -51,7 +51,7 @@
         {$filterStore.includes(filter) ? 'checked' : ''}"
       >
         {@html getIconByType(filter)}
-      </div>
+      </label>
 
       <span class="grow overflow-auto break-all text-center">
         {MarkerType[filter]}
@@ -64,7 +64,7 @@
         checked={$filterStore.includes(filter)}
         on:change={handleFilterChange}
       />
-    </label>
+    </div>
   {/each}
 </fieldset>
 
@@ -72,7 +72,7 @@
   .checked {
     background-color: #f7a1a1 !important;
   }
-  label {
+  div {
     -webkit-tap-highlight-color: transparent;
   }
 </style>
