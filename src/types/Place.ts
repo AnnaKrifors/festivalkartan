@@ -3,7 +3,7 @@ import type { Image } from "./Image";
 export const MarkerType = {
   scene: "Scen",
   entrance: "Entré",
-  funfair: "Nöjesfält",
+  funfair: "Tivoli",
   market: "Marknad",
   pride: "Pride",
   safetytent: "Trygghetstält",

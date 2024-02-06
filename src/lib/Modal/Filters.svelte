@@ -15,31 +15,36 @@
     }
     filters = Array.from(uniqueMarkerTypes).filter(
       (filter) =>
-        !["safetytent", "market", "entrance_fee", "prideparade"].find(
-          (item) => filter === item,
-        ),
+        ![
+          "market",
+          "entrance",
+          "pride",
+          "safetytent",
+          "wristband",
+          "drinkWater",
+          "redCross",
+          "prideparade",
+          "foodcourt",
+        ].find((item) => filter === item),
     );
   });
-
   const handleFilterChange = (event: Event) => {
     filterStore.update((filters) => {
       const target = event.target as HTMLInputElement;
       if (target.checked) {
-        return target.value === "pride"
-          ? [...filters, target.value, "prideparade"]
+        return target.value === "scene"
+          ? [...filters, target.value, "pride"]
           : [...filters, target.value];
       }
-      return target.value === "pride"
-        ? filters.filter(
-            (filter) => filter !== "pride" && filter !== "prideparade",
-          )
+      return target.value === "scene"
+        ? filters.filter((filter) => filter !== "scene" && filter !== "pride")
         : filters.filter((filter) => filter !== target.value);
     });
   };
 </script>
 
 <fieldset
-  class="mb-5 mt-2 grid grid-cols-4 justify-start gap-3"
+  class="mb-5 mt-2 grid grid-cols-3 justify-start gap-3"
   aria-label="filter"
 >
   {#each filters as filter}
