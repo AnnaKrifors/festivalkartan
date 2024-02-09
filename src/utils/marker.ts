@@ -56,6 +56,7 @@ export function addMarkers(places: Place[]) {
   for (const place of unhiddenPlaces) {
     if (!place.coordinates) continue;
     const el = document.createElement("div");
+    el.ariaHidden = "true";
     el.innerHTML += defaultMarker();
     el.innerHTML += getIconByType(place.markerType);
 

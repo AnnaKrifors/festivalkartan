@@ -32,30 +32,25 @@
   };
 </script>
 
-<fieldset
-  class="mb-5 mt-2 grid grid-cols-3 justify-start gap-3"
-  aria-label="filter"
->
+<fieldset class="mb-5 mt-2 grid grid-cols-4 justify-start gap-3">
+  <legend class="sr-only">Filter</legend>
   {#each filters as filter}
     <div
-      class="group relative flex flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]
-     "
+      class="group relative flex flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]"
     >
-      <label
-        for={filter}
-        class="flex h-14 w-14 cursor-pointer
-        items-center justify-center rounded-full bg-white p-2
-        transition group-focus-within:ring-2 group-focus-within:ring-[#003E4A] group-focus-within:ring-offset-2 group-focus-within:ring-offset-white
+      <div
+        class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-white p-2 transition group-focus-within:ring-2 group-focus-within:ring-[#003E4A] group-focus-within:ring-offset-2 group-focus-within:ring-offset-white
        lg:h-16 lg:w-16
          lg:hover:bg-[#F7A1A1]/30
         {$filterStore.includes(filter) ? 'checked' : ''}"
+        aria-hidden="true"
       >
         {@html getIconByType(filter)}
-      </label>
+      </div>
 
-      <span class="grow overflow-auto break-all text-center">
+      <label for={filter} class="grow overflow-auto break-all text-center">
         {MarkerType[filter]}
-      </span>
+      </label>
       <input
         id={filter}
         class="absolute ml-auto appearance-none p-1 outline-none"
