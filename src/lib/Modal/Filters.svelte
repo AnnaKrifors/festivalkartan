@@ -32,7 +32,7 @@
   };
 </script>
 
-<fieldset class="mb-5 mt-2 grid grid-cols-4 justify-start gap-3">
+<fieldset class="mb-5 mt-2 grid grid-cols-3 justify-start gap-3">
   <legend class="sr-only">Filter</legend>
   {#each filters as filter}
     <div
