@@ -124,16 +124,6 @@ export function getIconByType(currMarker: MarkerType) {
   return miscMarkerIcon();
 }
 
-function getMapOffset() {
-  const modal = document.getElementById("modal")?.getClientRects()[0];
-  const root = document.getElementById("main")?.getClientRects()[0];
-  if (!modal || !root) return { bottom: 0, top: 0, right: 0, left: 0 };
-  const modalHeight = root.height * 0.77;
-  return modal.width === root.width
-    ? { bottom: modalHeight, top: 30, right: 30, left: 30 }
-    : { left: modal.width, top: 40, right: 40, bottom: 40 };
-}
-
 export function setCurrentPlace(place: Place) {
   if (current) {
     unsetCurrentPlace();
@@ -144,7 +134,6 @@ export function setCurrentPlace(place: Place) {
 
   if (!current) return;
   const currEl = document.getElementById(current.ID.toString());
-
   if (currEl !== null && currEl !== undefined) {
     currEl.classList.add("drop-shadow-markerShadow");
     Object.keys(selectedMarkerStyle).forEach((key) => {
@@ -155,16 +144,35 @@ export function setCurrentPlace(place: Place) {
     currEl.querySelector(".main-marker")?.setAttribute("fill", "#E9425C");
   }
 
+  const mapOffset = {
+    Latitude: place.coordinates.latitude,
+    Longitude: place.coordinates.longitude,
+  };
+
+  const windowHeight = window.innerHeight;
+  const centerOffset = windowHeight * 0.25;
+
+  if (window.innerWidth < 768) {
+    // Mobile devices
+    const denominator = windowHeight < 810 ? 163285 : 133285;
+    mapOffset.Latitude -= centerOffset / denominator;
+  } else if (window.innerWidth < 1024) {
+    // Tablets
+    mapOffset.Latitude -= (windowHeight * 0.28) / 143285;
+  } else {
+    // Desktops
+    mapOffset.Longitude -= 0.004;
+  }
+
   map.flyTo({
-    center: [place.coordinates.longitude, place.coordinates.latitude],
-    padding: getMapOffset(),
-    zoom: 14,
+    center: [mapOffset.Longitude, mapOffset.Latitude],
+    zoom: 18,
   });
 }
 function zoomMarkerBounds() {
   let bounds = new maplibregl.LngLatBounds();
   markers.forEach((marker) => bounds.extend(marker.getLngLat()));
-  map.fitBounds(bounds);
+  map.fitBounds(bounds, { padding: 50 });
 }
 
 export function unsetCurrentPlace() {
