@@ -35,8 +35,9 @@
 <fieldset class="mb-5 mt-2 grid grid-cols-3 justify-start gap-3">
   <legend class="sr-only">Filter</legend>
   {#each filters as filter}
-    <div
+    <label
       class="group relative flex flex-col items-center gap-1 overflow-hidden pt-2 text-sm text-[#003E4A]"
+      for={filter}
     >
       <div
         class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-white p-2 transition group-focus-within:ring-2 group-focus-within:ring-[#003E4A] group-focus-within:ring-offset-2 group-focus-within:ring-offset-white
@@ -48,18 +49,19 @@
         {@html getIconByType(filter)}
       </div>
 
-      <label for={filter} class="grow overflow-auto break-all text-center">
+      <div class="grow overflow-auto break-all text-center" aria-hidden="true">
         {MarkerType[filter]}
-      </label>
+      </div>
       <input
         id={filter}
+        aria-label={MarkerType[filter]}
         class="absolute ml-auto appearance-none p-1 outline-none"
         type="checkbox"
         value={filter}
         checked={$filterStore.includes(filter)}
         on:change={handleFilterChange}
       />
-    </div>
+    </label>
   {/each}
 </fieldset>
 
