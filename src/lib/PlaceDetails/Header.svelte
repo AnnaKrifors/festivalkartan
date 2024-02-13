@@ -12,9 +12,9 @@
 
 <div class="relative">
   <h1
-    class={`z-10 max-w-[80%] truncate whitespace-nowrap rounded-r-lg text-xl tracking-wide text-white md:text-4xl ${
+    class={`z-10 max-w-[95%] truncate whitespace-nowrap rounded-r-lg text-base tracking-wide text-white md:text-4xl ${
       (images?.length > 0 || videoOnTop) && "absolute"
-    } bg-coralred bottom-0 translate-y-1/2 px-10 py-2 uppercase`}
+    } bottom-0 translate-y-1/2 bg-coralred px-10 py-2 uppercase`}
   >
     {title}
   </h1>
