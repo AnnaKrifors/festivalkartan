@@ -32,9 +32,7 @@
             },
             vasteras: {
               type: "raster",
-              tiles: [
-                "https://visitvasteras.se/app/themes/visit-vasteras/3d-map/tiles/{z}/{x}/{y}.png",
-              ],
+              tiles: ["/maptiles/{z}/{x}/{y}.png"],
               tileSize: 256,
               bounds: [16.509005391, 59.575299686, 16.640489282, 59.639870904],
             },
@@ -108,7 +106,7 @@
 </script>
 
 <div class="map" bind:this={mapContainer}>
-  <div class="attribution absolute bottom-0 right-0 rounded-sm">
+  <div class="attribution absolute bottom-0 right-0 z-50 rounded-sm">
     <a
       href="https://www.openstreetmap.org/copyright"
       target="_blank"
