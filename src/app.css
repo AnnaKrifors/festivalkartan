@@ -137,6 +137,7 @@ div.mapboxgl-popup-content,
 }
 
 .marker-icon-style {
+  padding: 0.05rem;
   position: absolute;
   top: 34%;
   left: 50%;

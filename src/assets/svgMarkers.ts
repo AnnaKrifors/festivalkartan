@@ -12,26 +12,24 @@ export const wristBandIcon = () => `
 </svg>`;
 
 export const prideIcon = () => `
-  <svg height="80%" class="marker-icon" fill="url('#prideColor')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-  <path  d="M12 10c-3.86 0-7 3.14-7 7h2c0-2.76 2.24-5 5-5s5 2.24 5 5h2c0-3.86-3.14-7-7-7zm0-4C5.93 6 1 10.93 1 17h2c0-4.96 4.04-9 9-9s9 4.04 9 9h2c0-6.07-4.93-11-11-11z"></path>
-  <defs>
-  <linearGradient id="prideColor">
-    <stop offset="14.28%" stop-color="#E40303" />
-    <stop offset="28.56%" stop-color="#FF8C00" />
-    <stop offset="42.84%" stop-color="#FFED00" />
-    <stop offset="57.12%" stop-color="#008026" />
-    <stop offset="71.4%" stop-color="#24408E" />
-    <stop offset="84.68%" stop-color="#732982" />
-  </linearGradient>
+<svg height="80%"  class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 40 640 512">
+<path d="M320 96C178.6 96 64 210.6 64 352v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352C0 175.3 143.3 32 320 32s320 143.3 320 320v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352C576 210.6 461.4 96 320 96zm0 192c-35.3 0-64 28.7-64 64v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352c0-70.7 57.3-128 128-128s128 57.3 128 128v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352c0-35.3-28.7-64-64-64zM160 352v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352c0-123.7 100.3-224 224-224s224 100.3 224 224v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V352c0-88.4-71.6-160-160-160s-160 71.6-160 160z" fill="url(#prideColor)"/>
+<defs>
+<linearGradient id="prideColor">
+  <stop offset="14.28%" stop-color="#E40303" />
+  <stop offset="28.56%" stop-color="#FF8C00" />
+  <stop offset="42.84%" stop-color="#FFED00" />
+  <stop offset="57.12%" stop-color="#008026" />
+  <stop offset="71.4%" stop-color="#24408E" />
+  <stop offset="84.68%" stop-color="#732982" />
+</linearGradient>
 </defs>
-  </svg>`;
-
-export const entranceIcon = () => `
-<svg height="80%" class="marker-icon MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-m9simb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-<path d="M19 19V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v14H3v2h18v-2zm-2 0H7V5h10zm-4-8h2v2h-2z">
-</path>
 </svg>
 `;
+
+export const entranceIcon = () => `
+<svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path d="M96 64c0-35.3 28.7-64 64-64H416c35.3 0 64 28.7 64 64V448h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H432 144 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96V64zM384 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" fill="#1B1B1B"/></svg>`;
 
 export const sceneAreasIcon = () => `
 <svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 49" fill="none">
@@ -43,9 +41,9 @@ export const marketIcon = () => `
 <path xmlns="http://www.w3.org/2000/svg" d="M38.45 7.53998C13.37 17.73 23.53 -9.70001 4.07999 4.73999L0.0100098 6.21998L8.07001 38.37H12.51L8.56 22.62C25.91 7.84998 18.89 38.71 39.41 8.43999C39.9 7.73999 39.26 7.20998 38.45 7.53998Z" fill="#1B1B1B"/></svg>`;
 
 export const waterIcon = () => `
-<svg height="80%" class="marker-icon MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-<path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2zm-4.17-6c.37 0 .67.26.74.62.41 2.22 2.28 2.98 3.64 2.87.43-.02.79.32.79.75 0 .4-.32.73-.72.75-2.13.13-4.62-1.09-5.19-4.12-.08-.45.28-.87.74-.87z"></path>
-</svg>`;
+<svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+<path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z" fill="#1B1B1B"/></svg>
+`;
 
 export const redcrossIcon = () => `
 <svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28" fill="none">
@@ -59,9 +57,9 @@ export const funfairIcon = () => `
 <path xmlns="http://www.w3.org/2000/svg" d="M31.4 26.11L32.05 23.0201L22.07 19.01L18.15 20.22H17.26V10.9901H30.7V6.84004L16.39 0.800049L2.08002 6.84004V10.9901H15.52V20.22H13.64L8.34003 14.98H4.84003L4.10999 13.8201H2.77002L3.65002 15.2101L0.72998 19.91L2.03998 21.11L5.65997 19.16L8.96002 24.3801L6.65002 26.3801L8.45001 34.48L10.98 33.83L9.65002 27.8501L13.65 26.7401H15.53V36.19H2.09003V40.34H30.7V36.19H17.26V26.7401H19.72L23.72 27.8501L22.39 33.83L24.92 34.48L26.72 26.3801L25.57 25.3801L26.17 22.7L31.4 26.11Z" fill="#1B1B1B"/></svg>`;
 
 export const safetytentIcon = () => `
-<svg height="80%" class="marker-icon MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-<path d="M16 13c3.09-2.81 6-5.44 6-7.7C22 3.45 20.55 2 18.7 2c-1.04 0-2.05.49-2.7 1.25C15.34 2.49 14.34 2 13.3 2 11.45 2 10 3.45 10 5.3c0 2.26 2.91 4.89 6 7.7zm-2.7-9c.44 0 .89.21 1.18.55L16 6.34l1.52-1.79c.29-.34.74-.55 1.18-.55.74 0 1.3.56 1.3 1.3 0 1.12-2.04 3.17-4 4.99-1.96-1.82-4-3.88-4-4.99 0-.74.56-1.3 1.3-1.3zM19 16h-2c0-1.2-.75-2.28-1.87-2.7L8.97 11H1v11h6v-1.44l7 1.94 8-2.5v-1c0-1.66-1.34-3-3-3zM3 20v-7h2v7H3zm10.97.41L7 18.48V13h1.61l5.82 2.17c.34.13.57.46.57.83 0 0-1.99-.05-2.3-.15l-2.38-.79-.63 1.9 2.38.79c.51.17 1.04.26 1.58.26H19c.39 0 .74.23.9.56l-5.93 1.84z"></path>
-</svg>`;
+<svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z" fill="#1B1B1B"/></svg>
+`;
 
 export const prideParadeIcon = () => `
 <svg height="30%" class="marker-icon" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,13 +78,12 @@ export const foodCourtIcon = () => `
 `;
 
 export const miscMarkerIcon = () => `
-<svg height="80%" class="marker-icon MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-m9simb" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2">
-</path>
-</svg>
-`;
+<svg height="80%" class="marker-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" fill="#1B1B1B"/>
+</svg>`;
 
 export const defaultMarker = () => `
-<svg height="100%" viewBox="0 0 140 203" xmlns="http://www.w3.org/2000/svg">
+<svg class="overflow-visible" height="100%" viewBox="0 0 140 203" xmlns="http://www.w3.org/2000/svg">
 <path class="main-marker" fill="#F4F3F1" stroke="#1B1B1B" stroke-width="6px" d="M68.2726 201.102C68.1751 201.221 68.0842 201.332 67.9999 201.434C67.9156 201.332 67.8247 201.221 67.7272 201.102C67.0509 200.276 66.0622 199.057 64.8149 197.485C62.3204 194.34 58.7926 189.784 54.6638 184.145C46.4045 172.862 35.7482 157.253 26.1474 139.933C16.5422 122.604 8.01874 103.608 3.99054 85.5448C-0.0402374 67.4702 0.460388 50.4754 8.70216 37.0069C23.2475 13.2372 45.6528 1.41475 67.9999 1.41475C90.347 1.41475 112.752 13.2372 127.298 37.0069C135.539 50.4754 136.04 67.4702 132.009 85.5448C127.981 103.608 119.458 122.604 109.852 139.933C100.252 157.253 89.5953 172.862 81.336 184.145C77.2071 189.784 73.6794 194.34 71.1848 197.485C69.9376 199.057 68.9489 200.276 68.2726 201.102Z"/>
 <circle class="marker-container relative" cx="68" cy="70" r="59" fill="#FFFDFD" stroke="none" stroke-width="2px"/>
 </svg>
