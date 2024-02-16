@@ -8,7 +8,7 @@
       "type": "iframe",
       "description": "ABB Arena Nord, Västerås"
     },
-    "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
+    "otherInfo": "<b>Öppetider:</b>\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\n<b>Entrébelagt:</b> ja \n<b>Åldersgräns:</b> 18 år",
     "buttonDetails": {
       "buttonText": "Consid",
       "url": "www.consid.com/sv"
@@ -23,7 +23,7 @@
       "type": "iframe",
       "description": "Entree 1 som leder in till festivalen"
     },
-    "otherInfo": "Öppetider:\nMåndag: 10.00 - 22.00\nTisdag: 18.00 - 23.00\nEntrébelagt: ja \nÅldersgräns: 18 år",
+    "otherInfo": "<b>Öppetider:</b>\nMåndag:10.00 - 22.00\nTisdag: 18.00 - 23.00\n<b>Entrébelagt:</b> ja \n<b>Åldersgräns:</b> 18 år",
     "buttonDetails": {
       "buttonText": "Google",
       "url": "https://www.google.com"
