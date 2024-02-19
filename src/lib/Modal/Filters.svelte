@@ -14,20 +14,37 @@
       uniqueMarkerTypes.add(place.markerType);
     }
     filters = Array.from(uniqueMarkerTypes).filter((filter) =>
-      ["scene", "toilet", "funfair"].find((item) => filter === item),
+      ["scene", "funfair", "misc"].find((item) => filter === item),
     );
   });
   const handleFilterChange = (event: Event) => {
+    //filter that's used for the miscCategory.
+    const miscFilter = Object.keys(MarkerType).filter(
+      (marker) => !["scene", "funfair"].includes(marker),
+    );
+
     filterStore.update((filters) => {
       const target = event.target as HTMLInputElement;
       if (target.checked) {
-        return target.value === "scene"
-          ? [...filters, target.value, "pride"]
-          : [...filters, target.value];
+        if (target.value === "scene") {
+          return [...filters, target.value, "pride"];
+        }
+        if (target.value === "misc") {
+          return [...filters, ...miscFilter];
+        }
+        //adds other filters thats not checked.
+        return [...filters, target.value];
       }
-      return target.value === "scene"
-        ? filters.filter((filter) => filter !== "scene" && filter !== "pride")
-        : filters.filter((filter) => filter !== target.value);
+      if (target.value === "scene") {
+        return filters.filter(
+          (filter) => filter !== "scene" && filter !== "pride",
+        );
+      }
+      if (target.value === "misc") {
+        return filters.filter((filter) => !miscFilter.includes(filter));
+      }
+      //removes other filters that arent checked.
+      return filters.filter((filter) => filter !== target.value);
     });
   };
 </script>
