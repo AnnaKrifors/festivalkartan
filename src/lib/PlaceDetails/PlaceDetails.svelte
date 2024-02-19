@@ -6,7 +6,7 @@
   import ImageCarousel from "./ImageCarousel.svelte";
   import ProgramButton from "./ProgramButton.svelte";
   import Video from "./Video.svelte";
-
+  import Footer from "./Footer.svelte";
   let loading: boolean;
   let error: boolean;
   let placeDetails: any;
@@ -18,7 +18,7 @@
   });
 </script>
 
-<div class=" bg-mintlight flex h-full flex-col bg-cover">
+<div class="flex h-full flex-col bg-mintlight bg-cover">
   {#if error}
     <div class="px-10 py-20">
       <p class="text-center text-xl">
@@ -40,11 +40,11 @@
       <p class="text-xl">{@html placeDetails?.preface}</p>
     </div>
     <div
-      class="w-100 bg-mintlight flex-grow justify-between max-sm:flex max-sm:flex-col-reverse sm:px-10"
+      class="w-100 flex-grow justify-between bg-mintlight max-sm:flex max-sm:flex-col-reverse sm:px-10"
     >
       <About />
       <div
-        class="bg-mobile-green-gradient flex h-52 items-center justify-center pt-14 sm:hidden"
+        class="flex h-52 items-center justify-center bg-mobile-green-gradient pt-14 sm:hidden"
       >
         {#if placeDetails.buttonDetails}
           <ProgramButton buttonDetails={placeDetails.buttonDetails} />
@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-lg-green-gradient h-56 pb-20 pt-32 max-sm:hidden">
+    <div class="h-56 bg-lg-green-gradient pb-20 pt-32 max-sm:hidden">
       {#if placeDetails.buttonDetails}
         <ProgramButton buttonDetails={placeDetails.buttonDetails} />
       {/if}
@@ -70,4 +70,5 @@
       {/if}
     </div>
   {/if}
+  <Footer />
 </div>
