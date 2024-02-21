@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { miscFilterMarkerIcon } from "../../assets/svgMarkers";
   import { filterStore, placesStore } from "../../data/places";
   import { MarkerType } from "../../types/Place";
   import { getIconByType } from "../../utils/marker";
@@ -62,7 +63,11 @@
         {$filterStore.includes(filter) ? 'checked' : ''}"
         aria-hidden="true"
       >
-        {@html getIconByType(filter)}
+        {#if filter === "misc"}
+          {@html miscFilterMarkerIcon()}
+        {:else}
+          {@html getIconByType(filter)}
+        {/if}
       </div>
 
       <div class="grow overflow-auto break-all text-center" aria-hidden="true">
