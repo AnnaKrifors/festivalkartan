@@ -14,5 +14,4 @@ export type PlaceDetails = {
     buttonText: string;
     url: string;
   };
-  adress?: string;
 };
