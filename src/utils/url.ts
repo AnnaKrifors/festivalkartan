@@ -14,5 +14,5 @@ export function handlePlaceClick(place: Place) {
 
 export function handleBackClick() {
   unsetCurrentPlace();
-  window.history.replaceState({}, "", "/");
+  window.history.pushState({}, "", "/");
 }
