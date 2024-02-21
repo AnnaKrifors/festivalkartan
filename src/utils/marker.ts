@@ -19,7 +19,6 @@ import {
   markerLabel,
   prideParadeIcon,
   foodCourtIcon,
-  miscFilterMarkerIcon,
   miscMarkerIcon,
 } from "../assets/svgMarkers";
 
