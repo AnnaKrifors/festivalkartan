@@ -26,7 +26,7 @@
   id="modal"
   class="absolute bottom-0 left-0 z-10 max-h-full max-w-full pt-4"
 >
-  <div class="bg-modalgrey rounded-t-lg">
+  <div class="rounded-t-lg bg-modalgrey">
     <ExpandButton
       onClick={() => {
         expanded = !expanded;
@@ -43,7 +43,7 @@
     >
       <BackButton
         onClick={() => {
-          handleBackClick();
+          handleBackClick(true);
         }}
       />
       <CloseButton
@@ -51,7 +51,7 @@
           closed = !closed;
           if (closed) {
             expanded = false;
-            handleBackClick();
+            handleBackClick(false);
           }
         }}
       />

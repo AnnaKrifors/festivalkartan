@@ -126,7 +126,7 @@ export function getIconByType(currMarker: MarkerType) {
 
 export function setCurrentPlace(place: Place) {
   if (current) {
-    unsetCurrentPlace();
+    unsetCurrentPlace(true);
   }
   currentPlace.set(place);
 
@@ -175,7 +175,7 @@ function zoomMarkerBounds() {
   map.fitBounds(bounds, { padding: 50 });
 }
 
-export function unsetCurrentPlace() {
+export function unsetCurrentPlace(locationReset: boolean) {
   if (!current) return;
   const currEl = document.getElementById(current.ID.toString());
 
@@ -191,9 +191,10 @@ export function unsetCurrentPlace() {
   }
 
   currentPlace.set(null);
-  zoomMarkerBounds();
+  if (locationReset) {
+    zoomMarkerBounds();
+  }
 }
-
 function removeMarkers() {
   markers.forEach((marker) => marker.remove());
   markers = [];

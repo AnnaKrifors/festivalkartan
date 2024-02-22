@@ -12,7 +12,7 @@ export function handlePlaceClick(place: Place) {
   }
 }
 
-export function handleBackClick() {
-  unsetCurrentPlace();
+export function handleBackClick(locationReset: boolean) {
+  unsetCurrentPlace(locationReset);
   window.history.pushState({}, "", "/");
 }
