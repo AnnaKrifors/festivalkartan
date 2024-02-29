@@ -100,10 +100,10 @@ export function getIconByType(currMarker: MarkerType) {
   if (currMarker === "entrance") {
     return entranceIcon();
   }
-  if (currMarker === "drinkWater") {
+  if (currMarker === "drinkwater") {
     return waterIcon();
   }
-  if (currMarker === "redCross") {
+  if (currMarker === "redcross") {
     return redcrossIcon();
   }
   if (currMarker === "market") {

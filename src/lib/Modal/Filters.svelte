@@ -4,7 +4,7 @@
   import { MarkerType } from "../../types/Place";
   import { getIconByType } from "../../utils/marker";
 
-  let filters: MarkerType[] = [];
+  let filters: MarkerType[] = ["scene", "funfair", "misc"];
 
   placesStore.subscribe((places) => {
     if (filters.length > 0) {
@@ -12,12 +12,13 @@
     }
     const uniqueMarkerTypes = new Set<MarkerType>();
     for (const place of places) {
-      uniqueMarkerTypes.add(place.markerType);
+      if (!uniqueMarkerTypes.has(place.markerType)) {
+        uniqueMarkerTypes.add("misc");
+      }
     }
-    filters = Array.from(uniqueMarkerTypes).filter((filter) =>
-      ["scene", "funfair", "misc"].find((item) => filter === item),
-    );
+    filters = Array.from(uniqueMarkerTypes);
   });
+
   const handleFilterChange = (event: Event) => {
     //filter that's used for the miscCategory.
     const miscFilter = Object.keys(MarkerType).filter(
