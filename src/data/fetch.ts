@@ -1,15 +1,8 @@
-export const get = async <T>() => {
-  const placesUrl = "mockData.json";
-  const response = await fetch(placesUrl);
+const BASE_URL =
+  "https://test.vasterascityfestival.se/wp-json/places/v1/places/";
+
+export const get = async <T>(url: string) => {
+  const response = await fetch(BASE_URL + url);
   const data = await response.json();
-
-  return data as T;
-};
-
-export const getDetails = async <T>() => {
-  const detailsUrl = "mockDataDetails.json";
-  const response = await fetch(detailsUrl);
-  const data = await response.json();
-
   return data as T;
 };

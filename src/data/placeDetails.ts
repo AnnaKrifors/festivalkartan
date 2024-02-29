@@ -1,17 +1,14 @@
 import { writable } from "svelte/store";
 import type { PlaceDetails } from "../types/PlaceDetails";
-import { getDetails } from "./fetch";
+import { get } from "./fetch";
 import { currentPlace } from "./places";
 
 const fetchPlaceDetails = async (id: number) => {
-  const response = await getDetails<PlaceDetails[]>();
-
-  const placeDetails = response.find((item) => item.ID === id);
+  const placeDetails = await get<PlaceDetails>(`${id}`);
 
   if (!placeDetails) {
-    throw new Error(`could not find ${id} `);
+    throw new Error(`Could not find details for place with ID ${id}`);
   }
-
   return placeDetails;
 };
 

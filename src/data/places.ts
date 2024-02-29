@@ -3,7 +3,7 @@ import type { Place } from "../types/Place";
 import { get } from "./fetch";
 
 const fetchPlaces = async () => {
-  const response = await get<Place[]>();
+  const response = await get<Place[]>("");
 
   for (const place of response) {
     place.selected = false;
