@@ -2,7 +2,7 @@ import { writable, type Writable } from "svelte/store";
 import type { Place } from "../types/Place";
 import { get } from "./fetch";
 
-const fetchPlaces = async () => {
+export const fetchPlaces = async () => {
   const response = await get<Place[]>("");
 
   for (const place of response) {
@@ -11,7 +11,6 @@ const fetchPlaces = async () => {
 
   return response;
 };
-
 /**
  * filters `placesStore`
  *  by the given markerType names
@@ -19,7 +18,6 @@ const fetchPlaces = async () => {
 export const filterStore: Writable<string[]> = writable([]);
 
 export const placesStore: Writable<Place[]> = writable([]);
-fetchPlaces().then((places) => placesStore.set(places));
 
 export const currentPlace: Writable<Place | null> = writable(null);
 

@@ -16,7 +16,7 @@
 
       return formattedURL === formattedTitle;
     });
-    matchedPlace ? setCurrentPlace(matchedPlace) : unsetCurrentPlace();
+    matchedPlace ? setCurrentPlace(matchedPlace) : unsetCurrentPlace(true);
   });
 </script>
 

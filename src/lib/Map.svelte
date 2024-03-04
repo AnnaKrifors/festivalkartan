@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fetchPlaces } from "../data/places";
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
   import { onDestroy, onMount } from "svelte";
@@ -70,7 +71,9 @@
 
     $mapStore.addControl(geolocate);
     $mapStore.addControl(new maplibregl.NavigationControl({}), "top-right");
-    $mapStore.on("load", function () {
+    $mapStore.on("load", async function () {
+      await fetchPlaces().then((places) => placesStore.set(places));
+
       $placesStore.forEach((place) => {
         if (window.location.href.includes(encodeURI(`${place.postTitle}`))) {
           return setCurrentPlace(place);
