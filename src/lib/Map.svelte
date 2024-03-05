@@ -75,7 +75,11 @@
       await fetchPlaces().then((places) => placesStore.set(places));
 
       $placesStore.forEach((place) => {
-        if (window.location.href.includes(encodeURI(`${place.postTitle}`))) {
+        if (
+          window.location.href.includes(
+            `${place.postTitle.replace(/\s+/g, "+")}`,
+          )
+        ) {
           return setCurrentPlace(place);
         }
       });
