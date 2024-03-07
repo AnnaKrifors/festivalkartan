@@ -23,7 +23,7 @@
           >
             {#if place.images}
               <img
-                class="w-40 shrink-0 rounded-l-lg object-cover lg:w-60"
+                class="aspect-[16/10] w-40 shrink-0 rounded-l-lg object-cover lg:w-60"
                 src={place.images[0].url || ""}
                 alt={place.images[0].alt}
               />
@@ -41,7 +41,7 @@
               </span>
 
               <div
-                class="absolute right-0 translate-x-1/2 rounded-full bg-darkgreen md:p-1 lg:group-hover:bg-black"
+                class="bg-darkgreen absolute right-0 translate-x-1/2 rounded-full md:p-1 lg:group-hover:bg-black"
               >
                 <Icon name="arrow" className="w-6 fill-white" />
               </div>
