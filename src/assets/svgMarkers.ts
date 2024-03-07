@@ -1,3 +1,5 @@
+import type { MarkerType } from "../types/Place";
+
 export const markerLabel = (title: string) =>
   `<div class="marker-label first-letter:uppercase absolute left-1/2 transform -translate-x-1/2 -translate-y-full -top-1 text-center text-sm whitespace-nowrap bg-slate-100 p-1 border-2 border-[#003E4A] rounded ">${title}</div>`;
 export const toiletIcon = () => `
@@ -95,3 +97,43 @@ export const defaultMarker = () => `
 <circle class="marker-container relative" cx="68" cy="70" r="59" fill="#FFFDFD" stroke="none" stroke-width="2px"/>
 </svg>
   `;
+
+  export function getIconByType(currMarker: MarkerType) {
+    if (currMarker === "pride") {
+      return prideIcon();
+    }
+    if (currMarker === "scene") {
+      return sceneAreasIcon();
+    }
+    if (currMarker === "wristband") {
+      return wristBandIcon();
+    }
+    if (currMarker === "toilet") {
+      return toiletIcon();
+    }
+    if (currMarker === "entrance") {
+      return entranceIcon();
+    }
+    if (currMarker === "drinkwater") {
+      return waterIcon();
+    }
+    if (currMarker === "redcross") {
+      return redcrossIcon();
+    }
+    if (currMarker === "market") {
+      return marketIcon();
+    }
+    if (currMarker === "funfair") {
+      return funfairIcon();
+    }
+    if (currMarker === "safetytent") {
+      return safetytentIcon();
+    }
+    if (currMarker === "prideparade") {
+      return prideParadeIcon();
+    }
+    if (currMarker === "foodcourt") {
+      return foodCourtIcon();
+    }
+    return miscMarkerIcon();
+  }

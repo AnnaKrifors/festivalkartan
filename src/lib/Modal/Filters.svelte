@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { miscFilterMarkerIcon } from "../../assets/svgMarkers";
+  import { getIconByType, miscFilterMarkerIcon } from "../../assets/svgMarkers";
   import { filterStore, placesStore } from "../../data/places";
   import { MarkerType } from "../../types/Place";
-  import { getIconByType } from "../../utils/marker";
 
   let filters: MarkerType[] = ["scene", "funfair", "misc"];
 

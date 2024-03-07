@@ -33,7 +33,9 @@
             },
             vasteras: {
               type: "raster",
-              tiles: ["/maptiles/{z}/{x}/{y}.png"],
+              tiles: [
+                "/app/themes/city-festival/3d-map/maptiles/{z}/{x}/{y}.png",
+              ],
               tileSize: 256,
               bounds: [16.509005391, 59.575299686, 16.640489282, 59.639870904],
             },

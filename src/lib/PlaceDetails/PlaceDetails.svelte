@@ -18,7 +18,7 @@
   });
 </script>
 
-<div class=" flex h-full flex-col bg-cover">
+<div class="flex h-full flex-col bg-cover">
   {#if error}
     <div class="px-10 py-20">
       <p class="text-center text-xl">
@@ -36,7 +36,7 @@
       video={placeDetails?.video}
       videoOnTop={$currentPlaceStore?.videoOnTop}
     />
-    <div class=" p-10">
+    <div class="p-10">
       <p class="text-xl">{@html placeDetails?.preface}</p>
     </div>
     <div

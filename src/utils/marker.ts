@@ -2,24 +2,12 @@ import maplibregl, { Map, Marker } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { mapStore } from "../data/map";
 import { currentPlace } from "../data/places";
-import { MarkerType, type Place } from "../types/Place";
+import { type Place } from "../types/Place";
 import { handlePlaceClick } from "./url";
 import {
-  entranceIcon,
-  funfairIcon,
   defaultMarker,
-  marketIcon,
-  prideIcon,
-  redcrossIcon,
-  safetytentIcon,
-  sceneAreasIcon,
-  toiletIcon,
-  waterIcon,
-  wristBandIcon,
+  getIconByType,
   markerLabel,
-  prideParadeIcon,
-  foodCourtIcon,
-  miscMarkerIcon,
 } from "../assets/svgMarkers";
 
 let markers: Marker[] = [];
@@ -82,46 +70,6 @@ export function addMarkers(places: Place[]) {
     });
     markers.push(marker);
   }
-}
-
-export function getIconByType(currMarker: MarkerType) {
-  if (currMarker === "pride") {
-    return prideIcon();
-  }
-  if (currMarker === "scene") {
-    return sceneAreasIcon();
-  }
-  if (currMarker === "wristband") {
-    return wristBandIcon();
-  }
-  if (currMarker === "toilet") {
-    return toiletIcon();
-  }
-  if (currMarker === "entrance") {
-    return entranceIcon();
-  }
-  if (currMarker === "drinkwater") {
-    return waterIcon();
-  }
-  if (currMarker === "redcross") {
-    return redcrossIcon();
-  }
-  if (currMarker === "market") {
-    return marketIcon();
-  }
-  if (currMarker === "funfair") {
-    return funfairIcon();
-  }
-  if (currMarker === "safetytent") {
-    return safetytentIcon();
-  }
-  if (currMarker === "prideparade") {
-    return prideParadeIcon();
-  }
-  if (currMarker === "foodcourt") {
-    return foodCourtIcon();
-  }
-  return miscMarkerIcon();
 }
 
 export function setCurrentPlace(place: Place) {
