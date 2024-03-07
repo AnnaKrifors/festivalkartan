@@ -78,11 +78,14 @@ export const foodCourtIcon = () => `
 `;
 
 export const miscMarkerIcon = () => `
-<svg height="50%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-352a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" fill="#1B1B1B"/></svg>
+<svg height="80%" class="marker-icon MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-m9simb" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path fill="#1B1B1B" d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12m10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6">
+</path>
+</svg>
 `;
 
 export const miscFilterMarkerIcon = () => `
-<svg height="80%" class="marker-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<svg height="80%" class="marker-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
   <path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" fill="#1B1B1B"/>
 </svg>`;
 
